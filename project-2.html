@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Flow Fields | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <a href="index.html" class="back-link">Back to home</a>
+
+        <!-- Hero Section -->
+        <section class="case-study-hero">
+            <h1>Organic Flow Fields</h1>
+            
+            <div class="hero-image">
+                Generated artwork preview / Animation still
+            </div>
+
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Medium</span>
+                    <span>Generative Art / p5.js</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span>Ongoing (2024-present)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Exhibition</span>
+                    <span>Digital Arts Festival 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <article class="case-study-content">
+            <!-- Section 1: Concept / Inspiration -->
+            <section class="content-section">
+                <h2>Concept</h2>
+                <p>
+                    Organic Flow Fields explores the intersection of natural movement patterns and 
+                    computational aesthetics. The project investigates how simple algorithmic rules 
+                    can generate complex, organic-feeling motion that mirrors patterns found in nature: 
+                    fluid dynamics, bird murmurations, wind through grass.
+                </p>
+                <p>
+                    Inspired by the work of pioneers in generative art and the mathematical beauty of 
+                    Perlin noise, the series creates real-time animations where thousands of particles 
+                    move through invisible force fields, their paths creating ephemeral drawings that 
+                    exist only for a moment before transforming into something new.
+                </p>
+
+                <div class="content-image">
+                    Early exploration / Sketch iterations
+                </div>
+            </section>
+
+            <!-- Section 2: Technical Approach -->
+            <section class="content-section">
+                <h2>Technical Approach</h2>
+                <p>
+                    The system uses a combination of Perlin noise fields and particle systems to 
+                    create emergent behavior. Each particle reads its local position in a multi-dimensional 
+                    noise space, which determines its velocity vector. Parameters include:
+                </p>
+                <ul>
+                    <li>Noise scale: Controls the "smoothness" of the flow field</li>
+                    <li>Particle count: Balancing visual density with performance</li>
+                    <li>Trail length: Creating motion blur through alpha blending</li>
+                    <li>Color evolution: Time-based palette shifts</li>
+                </ul>
+                <p>
+                    Rather than pre-rendering frames, the work exists as living code that generates 
+                    unique outputs each time it runs. The algorithm includes subtle randomization, 
+                    meaning no two viewings produce identical results—each instance is a unique artwork.
+                </p>
+
+                <div class="content-image">
+                    Code structure / Flow field visualization
+                </div>
+
+                <p>
+                    Performance optimization was crucial for smooth, real-time animation. I implemented 
+                    techniques like spatial hashing for neighbor detection and quadtree data structures 
+                    to manage particle interactions efficiently, maintaining 60fps even with 10,000+ particles.
+                </p>
+
+                <div class="content-image">
+                    Output variations / Generated stills
+                </div>
+            </section>
+
+            <!-- Section 3: Exhibition & Response -->
+            <section class="content-section">
+                <h2>Exhibition & Response</h2>
+                <p>
+                    The work was exhibited at the 2025 Digital Arts Festival, displayed on a large 
+                    vertical screen in a darkened space. Viewers could influence parameters through 
+                    subtle gestures, though the system maintained its autonomous behavior—a collaboration 
+                    between artist, algorithm, and audience.
+                </p>
+                <p>
+                    Viewer responses highlighted the meditative quality of watching the particles flow, 
+                    with many commenting on the "almost alive" feeling of the movement. The work sparked 
+                    conversations about agency in generative systems and where authorship lies when code 
+                    makes aesthetic decisions.
+                </p>
+                <p>
+                    The project continues to evolve, with recent experiments incorporating:
+                </p>
+                <ul>
+                    <li>3D flow fields using three.js</li>
+                    <li>Audio reactivity, where sound influences particle behavior</li>
+                    <li>Machine learning to evolve interesting parameter combinations</li>
+                    <li>Print outputs using pen plotters for physical artifacts</li>
+                </ul>
+                <p>
+                    This exploration has deepened my understanding of how computation can be a creative 
+                    medium in itself, not just a tool but a collaborator in the artistic process.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Your Name</p>
+                <div class="footer-links">
+                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
