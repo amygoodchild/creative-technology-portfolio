@@ -1,6 +1,6 @@
-# Portfolio Website
+# Creative Technology Portfolio
 
-Minimal portfolio showcasing UX/service design and generative art projects.
+Minimal creative technology portfolio showcasing UX/service design and generative art projects.
 
 ## Structure
 
@@ -107,6 +107,3 @@ No build configuration needed—just deploy the files as-is.
 </article>
 ```
 
-## License
-
-Feel free to use this template for your own portfolio. No attribution required.
