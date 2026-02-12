@@ -1,18 +1,23 @@
 # Creative Technology Portfolio
 
-Minimal creative technology portfolio showcasing UX/service design and generative art projects.
+Creative technology portfolio showcasing UX/service design and generative art projects.
 
 ## Structure
 
 ```
 /
 ├── index.html              # Homepage with project grid
-├── project-1.html          # UX case study example
-├── project-2.html          # Generative art case study example
 ├── style.css               # Shared styles for all pages
 ├── js/
 │   └── sketch.js          # p5.js generative header
-└── images/                 # Add your project images here
+└── projects/               # All project files
+    ├── project-1.html      # UX case study example
+    ├── project-2.html      # Generative art case study example
+    └── images/             # Project images
+        ├── project-1/      # Healthcare appointment system images
+        ├── project-2/      # Organic flow fields images
+        ├── project-3/
+        └── ...
 ```
 
 ## Tech Stack
@@ -30,9 +35,10 @@ Minimal creative technology portfolio showcasing UX/service design and generativ
    - Customize colors in `style.css` (see CSS variables in `:root`)
 
 2. **Add projects:**
-   - Duplicate `project-1.html` or `project-2.html` for new case studies
+   - Duplicate `projects/project-1.html` or `project-2.html` for new case studies
    - Update project cards in `index.html` to link to your case study pages
-   - Add images to the `/images` folder and replace placeholder divs
+   - Add images to `projects/images/project-X/` folders (each project has its own folder)
+   - Replace placeholder divs with `<img>` tags pointing to your images
 
 3. **Customize the p5.js sketch:**
    - Edit `js/sketch.js` to change the header animation
@@ -87,14 +93,14 @@ No build configuration needed—just deploy the files as-is.
 
 ## Adding New Projects
 
-1. Create a new HTML file (e.g., `project-3.html`)
-2. Copy the structure from `project-1.html` or `project-2.html`
+1. Create a new HTML file (e.g., `projects/project-3.html`)
+2. Copy the structure from `projects/project-1.html` or `project-2.html`
 3. Update the content
 4. Add a new project card in `index.html`:
 
 ```html
 <article class="project-card">
-    <a href="project-3.html">
+    <a href="projects/project-3.html">
         <div class="project-image">
             <div class="placeholder-image">Project Name</div>
         </div>

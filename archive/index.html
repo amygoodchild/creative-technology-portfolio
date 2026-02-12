@@ -18,32 +18,22 @@
 
 
     <div class="main-content-wrapper">
-        <nav class="main-nav" id="main-nav">
-            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="mailto:amy@amygoodchild.com">Contact</a>
-            </div>
-        </nav>
 
-        <!-- <div id="p5-container"></div> -->
-        <header class="hero-content">
+        <header class="hero">
             <h1 class="hero-title">Amy Goodchild</h1>
+        
+            <!-- <div id="p5-container"></div> -->
+            <div class="hero-content"></div> 
             <div class="tagline">Creative technologist, from concept to code.</div>
             <div class="tagline-mobile">
                 <div class="tagline-mobile-item">Creative technologist</div>
                 <div class="tagline-mobile-item">from concept to code</div>
             </div>
-        </header> 
-
+            
+        </header>
 
         <!-- Main Content -->
-        <section class="intro" id="about">
+        <section class="intro">
             <div class="intro-title">About</div>
   
             <p class="intro-text">
@@ -53,7 +43,7 @@
         </section>
 
         <!-- Project Grid -->
-        <section class="projects" id="work">
+        <section class="projects">
             <h2 class="section-title">Work</h2>
             
             <div class="project-holder" >
@@ -136,62 +126,6 @@
                     window.scrollTo(0, parseInt(saved, 10));
                 });
             }
-        })();
-
-        (function() {
-            var nav = document.getElementById('main-nav');
-            var hamburger = document.getElementById('nav-hamburger');
-            var scrollThreshold = 80;
-
-            function updateNav() {
-                if (window.scrollY > scrollThreshold) {
-                    nav.classList.add('nav-collapsed');
-                    nav.classList.add('nav-transition-disable');
-                    requestAnimationFrame(function() {
-                        requestAnimationFrame(function() {
-                            nav.classList.remove('nav-transition-disable');
-                        });
-                    });
-                } else {
-                    if (!nav.classList.contains('nav-open')) {
-                        nav.classList.remove('nav-collapsed');
-                        nav.classList.remove('nav-open');
-                    }
-                }
-            }
-
-            hamburger.addEventListener('click', function() {
-                if (nav.classList.contains('nav-collapsed')) {
-                    nav.classList.toggle('nav-open');
-                    hamburger.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
-                    if (!nav.classList.contains('nav-open') && window.scrollY <= scrollThreshold) {
-                        nav.classList.remove('nav-collapsed');
-                    }
-                }
-            });
-
-            document.addEventListener('click', function(e) {
-                if (nav.classList.contains('nav-open') && !nav.contains(e.target)) {
-                    nav.classList.remove('nav-open');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    if (window.scrollY <= scrollThreshold) {
-                        nav.classList.remove('nav-collapsed');
-                    }
-                }
-            });
-
-            nav.querySelectorAll('.nav-links a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('nav-open');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    if (window.scrollY <= scrollThreshold) {
-                        nav.classList.remove('nav-collapsed');
-                    }
-                });
-            });
-
-            window.addEventListener('scroll', updateNav);
-            updateNav();
         })();
     </script>
 </body>

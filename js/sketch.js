@@ -26,7 +26,7 @@ const sketch = (p) => {
     
     p.draw = () => {
         // Subtle background with low opacity for trail effect
-        p.background(255, 255, 255, 25);
+        p.background(26, 26, 26, 25);
         
         // Update and draw particles
         particles.forEach(particle => {
@@ -57,7 +57,7 @@ const sketch = (p) => {
             
             // Draw particle
             p.noStroke();
-            p.fill(26, 26, 26, particle.alpha);
+            p.fill(255, 255, 255, particle.alpha);
             p.circle(particle.x, particle.y, particle.size);
         });
         
@@ -72,7 +72,7 @@ const sketch = (p) => {
                 // If particles are close enough, draw a line
                 if (d < 100) {
                     let alpha = p.map(d, 0, 100, 40, 0);
-                    p.stroke(26, 26, 26, alpha);
+                    p.stroke(255, 255, 255, alpha);
                     p.strokeWeight(0.5);
                     p.line(
                         particles[i].x, particles[i].y,
@@ -81,6 +81,8 @@ const sketch = (p) => {
                 }
             }
         }
+
+        p.noLoop();
     };
     
     // Responsive canvas resize
