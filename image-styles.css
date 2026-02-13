@@ -1,4 +1,10 @@
+.instagram {
+    background-image: url('../images/instagram-logo.png');
+}
 
+.substack {
+    background-image: url('../images/substack-logo.png');
+}
 
 .intro-image-when-in-dome {
     background-image: url('../projects/images/when-in-dome/when-in-dome-intro.jpg');

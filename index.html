@@ -18,6 +18,7 @@
 
 
     <div class="main-content-wrapper">
+        <!-- <div class="temp-hide"> -->
         <nav class="main-nav" id="main-nav">
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
                 <span></span>
@@ -31,14 +32,20 @@
             </div>
         </nav>
 
+        <div class="secondary-nav">
+            <a href="https://www.instagram.com/amy_goodchild" class="secondary-nav-link instagram" target="_blank"></a>
+            <a href="https://amygoodchild.substack.com/" class="secondary-nav-link substack" target="_blank"></a>
+
+
+        </div>
+
         <!-- <div id="p5-container"></div> -->
         <header class="hero-content">
-            <h1 class="hero-title">Amy Goodchild</h1>
-            <div class="tagline">Creative technologist, from concept to code.</div>
-            <div class="tagline-mobile">
-                <div class="tagline-mobile-item">Creative technologist</div>
-                <div class="tagline-mobile-item">from concept to code</div>
-            </div>
+            <div class="hero-name">Amy Goodchild</div>
+
+            <h1 class="hero-title">Creative technologist</h1>
+            <div class="hero-tagline">from concept to code</div>
+            
         </header> 
 
 
@@ -51,17 +58,15 @@
                 I'm comfortable moving between concept development and hands-on execution, whether that's designing, coding or building. I'm great at figuring out a new technology as we create.<br><br>
             </p>
         </section>
+        <!-- </div> -->
 
         <!-- Project Grid -->
         <section class="projects" id="work">
-            <h2 class="section-title">Work</h2>
-            
-            <div class="project-holder" >
-                <a class="project-card" href="projects/when-in-dome.html">
-                    <div class="project-intro-image intro-image-when-in-dome"></div>
-                    
-                    <div class="project-info">
-                        <div class="project-info-top">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-scroll-layout">
+                <div class="project-text-panel">
+                    <a class="project-text-item" href="projects/when-in-dome.html">
+                        <div class="project-info-meta">
                             <h3 class="project-title">When in Dome</h3>
                             <div class="project-type">Physical Installation</div>
                             <div class="project-tags">
@@ -72,17 +77,10 @@
                                 <div class="project-tag">Installation</div>
                             </div>
                         </div>
-                        <div class="project-info-bottom">
-                            <p class="project-description">A geodesic dome filled with 4,378 LEDs, reacting to movement.</p>
-                        </div>  
-                    </div>
-                </a>
-
-                <a class="project-card" href="projects/flock.html">
-                    <div class="project-intro-image intro-image-flock"></div>
-                    
-                    <div class="project-info">
-                        <div class="project-info-top">
+                        <p class="project-description">A geodesic dome filled with 4,378 LEDs, reacting to movement.</p>
+                    </a>
+                    <a class="project-text-item" href="projects/flock.html">
+                        <div class="project-info-meta">
                             <h3 class="project-title">Flock</h3>
                             <div class="project-type">Browser-based artwork</div>
                             <div class="project-tags">
@@ -91,14 +89,32 @@
                                 <div class="project-tag">p5.js</div>
                             </div>
                         </div>
-                        <div class="project-info-bottom">
-                            <p class="project-description">Interactive artwork that pairs visitors, via a custom built server-side app, 
-                                to share a visual experience remotely.</p>
-                        </div>  
-                    </div>
-                </a>
-
-                
+                        <p class="project-description">Interactive artwork that pairs visitors, via a custom built server-side app, to share a visual experience remotely.</p>
+                    </a>
+                    <a class="project-text-item" href="projects/flock.html">
+                        <div class="project-info-meta">
+                            <h3 class="project-title">Other project</h3>
+                            <div class="project-type">Browser-based artwork</div>
+                            <div class="project-tags">
+                                <div class="project-tag">Node.js</div>
+                                <div class="project-tag">Web sockets</div>
+                                <div class="project-tag">p5.js</div>
+                            </div>
+                        </div>
+                        <p class="project-description">Interactive artwork that pairs visitors, via a custom built server-side app, to share a visual experience remotely.</p>
+                    </a>
+                </div>
+                <div class="project-images-column">
+                    <a class="project-image-link" href="projects/when-in-dome.html">
+                        <div class="project-intro-image intro-image-when-in-dome"></div>
+                    </a>
+                    <a class="project-image-link" href="projects/flock.html">
+                        <div class="project-intro-image intro-image-flock"></div>
+                    </a>
+                    <a class="project-image-link" href="projects/flock.html">
+                        <div class="project-intro-image intro-image-flock"></div>
+                    </a>
+                </div>
             </div>
 
 
@@ -108,6 +124,8 @@
         </section>
         
     </div>
+
+    <div class="height-spacer"></div>
 
 
 
@@ -125,6 +143,7 @@
 
     <!-- <script src="js/sketch.js"></script> -->
     <script>
+        /* Restore scroll position on reload (e.g. Live Reload) */
         (function() {
             var key = 'scrollPos' + (location.pathname || '');
             window.addEventListener('beforeunload', function() {
@@ -138,20 +157,28 @@
             }
         })();
 
+        /* Nav: collapse to hamburger on scroll (or always below 768px) */
         (function() {
             var nav = document.getElementById('main-nav');
             var hamburger = document.getElementById('nav-hamburger');
             var scrollThreshold = 80;
+            var mobileBreakpoint = 768;
+
+            function isMobileNav() {
+                return window.innerWidth <= mobileBreakpoint;
+            }
 
             function updateNav() {
-                if (window.scrollY > scrollThreshold) {
+                if (isMobileNav() || window.scrollY > scrollThreshold) {
                     nav.classList.add('nav-collapsed');
-                    nav.classList.add('nav-transition-disable');
-                    requestAnimationFrame(function() {
+                    if (!isMobileNav()) {
+                        nav.classList.add('nav-transition-disable');
                         requestAnimationFrame(function() {
-                            nav.classList.remove('nav-transition-disable');
+                            requestAnimationFrame(function() {
+                                nav.classList.remove('nav-transition-disable');
+                            });
                         });
-                    });
+                    }
                 } else {
                     if (!nav.classList.contains('nav-open')) {
                         nav.classList.remove('nav-collapsed');
@@ -164,7 +191,7 @@
                 if (nav.classList.contains('nav-collapsed')) {
                     nav.classList.toggle('nav-open');
                     hamburger.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
-                    if (!nav.classList.contains('nav-open') && window.scrollY <= scrollThreshold) {
+                    if (!nav.classList.contains('nav-open') && !isMobileNav() && window.scrollY <= scrollThreshold) {
                         nav.classList.remove('nav-collapsed');
                     }
                 }
@@ -174,7 +201,7 @@
                 if (nav.classList.contains('nav-open') && !nav.contains(e.target)) {
                     nav.classList.remove('nav-open');
                     hamburger.setAttribute('aria-expanded', 'false');
-                    if (window.scrollY <= scrollThreshold) {
+                    if (!isMobileNav() && window.scrollY <= scrollThreshold) {
                         nav.classList.remove('nav-collapsed');
                     }
                 }
@@ -184,14 +211,74 @@
                 link.addEventListener('click', function() {
                     nav.classList.remove('nav-open');
                     hamburger.setAttribute('aria-expanded', 'false');
-                    if (window.scrollY <= scrollThreshold) {
+                    if (!isMobileNav() && window.scrollY <= scrollThreshold) {
                         nav.classList.remove('nav-collapsed');
                     }
                 });
             });
 
             window.addEventListener('scroll', updateNav);
+            window.addEventListener('resize', updateNav);
             updateNav();
+        })();
+
+        /* Projects: fade text/inages based on which image is in view */
+        (function() {
+            var imageLinks = document.querySelectorAll('.project-image-link');
+            var textItems = document.querySelectorAll('.project-text-item');
+            if (!imageLinks.length || !textItems.length) return;
+
+            var ratios = new Map();
+            imageLinks.forEach(function(link, i) {
+                var img = link.querySelector('.project-intro-image');
+                if (img) ratios.set(img, { index: i, ratio: 0 });
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    var data = ratios.get(entry.target);
+                    if (data) data.ratio = entry.intersectionRatio;
+                });
+                var best = { index: 0, ratio: 0 };
+                ratios.forEach(function(data) {
+                    if (data.ratio > best.ratio) best = data;
+                });
+                var activeIndex = best.ratio > 0 ? best.index : 0;
+                textItems.forEach(function(t) { t.classList.remove('project-active'); });
+                imageLinks.forEach(function(l) { l.classList.remove('project-active'); });
+                if (textItems[activeIndex]) textItems[activeIndex].classList.add('project-active');
+                if (imageLinks[activeIndex]) imageLinks[activeIndex].classList.add('project-active');
+            }, {
+                threshold: [0, 0.25, 0.5, 0.75, 1],
+                rootMargin: '-15% 0px -35% 0px'
+            });
+
+            imageLinks.forEach(function(link) {
+                var img = link.querySelector('.project-intro-image');
+                if (img) observer.observe(img);
+            });
+
+            textItems[0].classList.add('project-active');
+            if (imageLinks[0]) imageLinks[0].classList.add('project-active');
+        })();
+
+        /* Section title: release to scroll away with last project text */
+        (function() {
+            var sectionTitle = document.querySelector('.projects .section-title');
+            var textPanel = document.querySelector('.project-text-panel');
+            if (!sectionTitle || !textPanel) return;
+
+            function checkTitleRelease() {
+                var rect = textPanel.getBoundingClientRect();
+                if (rect.top < 100) {
+                    sectionTitle.classList.add('section-title-released');
+                } else {
+                    sectionTitle.classList.remove('section-title-released');
+                }
+            }
+
+            window.addEventListener('scroll', checkTitleRelease, { passive: true });
+            checkTitleRelease();
         })();
     </script>
 </body>
