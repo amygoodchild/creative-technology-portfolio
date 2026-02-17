@@ -104,10 +104,14 @@ a {
    LAYOUT UTILITIES
    =================================== */
 
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+.main-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-bg);
+    min-width: 300px;
 }
 
 .main-content-wrapper{
@@ -322,6 +326,7 @@ a {
     text-align: left;
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
+    line-height: 1;
 }
 
 .hero-title{
@@ -554,58 +559,83 @@ a {
    CASE STUDY PAGE
    =================================== */
 
+.case-study-sticky-header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.case-study-sticky-header .hero-name {
+    position: static;
+    margin-top: 0;
+}
+
 .case-study-hero {
     padding: var(--spacing-xl) 0;
     text-align: center;
     border-bottom: 1px solid var(--color-subtle-highlight);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-}
-
-.case-study-hero .hero-image {
-    width: 80%;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    padding-left: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: -60px;
+    height: 60vh;
 }
 
-
-.case-study-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    justify-content: center;
-    margin-top: var(--spacing-md);
-    font-size: 0.9375rem;
-    color: var(--color-text);
+.case-study-hero-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    font-family: var(--font-serif);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-secondary);
+    align-self: start;
+    margin-top: 100px;
+    transition: font-size 0.4s ease;
 }
 
-.meta-item {
-    display: flex;
-    flex-direction: column;
+.case-study-hero-title.case-study-hero-title-stuck {
+    position: fixed;
+    top: 10px;
+    left: 200px; /* After "Amy Goodchild" ~1.2rem + gap */
+    font-size: 1.2rem;
+    margin-top: 0;
+    z-index: 99;
+    transition: font-size 0.6s ease;
 }
 
-.meta-label {
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 0.25rem;
-}
 
 .case-study-content {
-    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+    margin: var(--spacing-md) auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
 }
 
 .content-section {
-    max-width: 800px;
-    margin: 0 auto var(--spacing-xl);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: var(--spacing-md);
 }
+
+.case-study-intro-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    text-align: left;
+}
+
 
 .content-section h2 {
     margin-bottom: var(--spacing-md);
@@ -655,24 +685,19 @@ a {
     object-fit: cover;
 }
 
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: var(--spacing-lg);
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    transition: color 0.2s ease;
+.case-study-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.back-link:hover {
-    color: var(--color-text);
-    opacity: 1;
+.case-study-tag {
+    font-size: 0.8rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-secondary);
+    padding: 3px 10px;
 }
 
-.back-link::before {
-    content: '←';
-}
 
 /* ===================================
    MORE PROJECTS SECTION (Case Study Pages)

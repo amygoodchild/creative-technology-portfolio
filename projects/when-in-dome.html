@@ -6,55 +6,66 @@
     <title>When in Dome | Amy Goodchild</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../image-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@050;100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@50;100;200;300;400;600;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
-    <main class="container">
-        <a href="../index.html" class="back-link">Back to home</a>
+    <main class="project-content-wrapper">
+
+        <nav class="main-nav" id="main-nav">
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="mailto:amy@amygoodchild.com">Contact</a>
+            </div>
+        </nav>
+
+        <div class="secondary-nav">
+            <a href="https://www.instagram.com/amy_goodchild" class="secondary-nav-link instagram" target="_blank"></a>
+            <a href="https://amygoodchild.substack.com/" class="secondary-nav-link substack" target="_blank"></a>
+
+
+        </div>
+        
 
         <!-- Hero Section -->
-        <section class="case-study-hero">
-            <h1>When in Dome</h1>
-            
-            <div class="hero-image intro-image-when-in-dome"></div>
-
-            <div class="case-study-meta">
-                <div class="meta-item">
-                    <span class="meta-label">Role</span>
-                    <span>UX/Service Designer</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Timeline</span>
-                    <span>3 months (2025)</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Team</span>
-                    <span>Solo project</span>
-                </div>
-            </div>
+        <div class="case-study-sticky-header">
+            <a href="../index.html" class="hero-name">Amy Goodchild</a>
+        </div>
+        <section class="case-study-hero hero-image-when-in-dome">
+            <h1 class="case-study-hero-title" id="case-study-hero-title">When in Dome</h1>
         </section>
 
         <!-- Content Sections -->
         <article class="case-study-content">
-            <!-- Section 1: Problem / Context -->
             <section class="content-section">
-                <h2>The Problem</h2>
-                <p>
-                    A regional health service was experiencing high rates of missed appointments and 
-                    patient frustration with their booking system. The existing process required multiple 
-                    phone calls, long wait times, and offered limited flexibility for rescheduling.
-                </p>
-                <p>
-                    Research revealed that 30% of patients missed appointments due to confusion about 
-                    booking details, and staff spent an average of 45 minutes per day managing 
-                    appointment-related phone calls. The system needed to serve a diverse demographic, 
-                    including elderly patients with varying levels of digital literacy.
-                </p>
+                <div class="case-study-tags">
+                    <div class="case-study-tag">Geodesic dome build</div>
+                    <div class="case-study-tag">Processing</div>
+                    <div class="case-study-tag">Power distribution</div>
+                    <div class="case-study-tag">Soldering</div>
+                    <div class="case-study-tag">Fadecandy LED drivers</div>
+                    <div class="case-study-tag">Electronics</div>
+                    <div class="case-study-tag">Prototyping</div>
+                    <div class="case-study-tag">3D design</div>
+                    <div class="case-study-tag">Sewing</div>
+                </div>
 
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-1/research.jpg" alt="Research findings"> -->
-                    Research findings / User journey map
+                <div class="case-study-intro-text">
+                    When in Dome is a spatial light installation designed to explore group experience. A geodesic dome filled with lights responds to the movement of people inside, providing a space for shared interaction.
                 </div>
             </section>
+
+            
 
             <!-- Section 2: Approach / Process -->
             <section class="content-section">
@@ -176,5 +187,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../nav-script.js"></script>
 </body>
 </html>
