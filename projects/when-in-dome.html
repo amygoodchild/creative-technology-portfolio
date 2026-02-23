@@ -47,7 +47,19 @@
 
         <!-- Content Sections -->
         <article class="case-study-content">
-            <section class="content-section">
+            <section class="case-study-section section-main-width xl-gap-below">
+
+                <div class="case-study-columns columns-four">
+
+                    <div class="case-study-facts"><div class="large">4378</div><div class="small">LEDs</div></div>
+                    <div class="case-study-facts"><div class="large">4.2m</div><div class="small">diameter</div></div>
+                    <div class="case-study-facts"><div class="large">£2700</div><div class="small">material cost</div></div>
+                    <div class="case-study-facts"><div class="large">30 days</div><div class="small">initial build</div></div>
+                    <div class="case-study-facts"><div class="large">6 hrs</div><div class="small">installation time</div></div>
+                </div>
+                <div class="case-study-intro-text">
+                    When in Dome is a geodesic dome filled with lights that responds to the movement of people inside, providing a space for shared interaction. <br><br>This was largely a solo project, which I designed and built from start to finish, with some help from a few friends!
+                </div>
                 <div class="case-study-tags">
                     <div class="case-study-tag">Geodesic dome build</div>
                     <div class="case-study-tag">Processing</div>
@@ -59,75 +71,73 @@
                     <div class="case-study-tag">3D design</div>
                     <div class="case-study-tag">Sewing</div>
                 </div>
+            </section>
 
-                <div class="case-study-intro-text">
-                    When in Dome is a spatial light installation designed to explore group experience. A geodesic dome filled with lights responds to the movement of people inside, providing a space for shared interaction.
+            <section class="case-study-section section-wide-width">
+                <video class="case-study-visual" src="../projects/images/when-in-dome/when-in-dome-video3.mp4" autoplay controls loop muted playsinline></video>
+            </section>
+
+            <section class="case-study-section section-main-width xl-gap-below">
+                <div class="case-study-text">
+                    Anyone inside the dome can turn a wave of the arm, tilt of the head or twirl of their whole body into a performance for others to watch. Movement is tracked by a Kinect camera sensor and the lights respond to movement in real time, using my own custom built software which detects and interprets movement in the space.
+                </div>
+                <div class="case-study-text">
+                    The software was written in Processing and the LEDs are driven using Fadecandy.
+                </div>
+            </section>
+
+            <section class="case-study-section section-main-width">
+                <h3 class="case-study-content-title">Making of</h3>
+            </section>
+            <section class="case-study-section section-main-width">
+                <div class="case-study-text">
+                    <h4 class="case-study-content-title">Physical dome build</h4>
+                    I built the dome using injection moulded hubs made by <a href="https://buildwithhubs.co.uk" target="_blank">BuildWithHubs</a> and sawn timber struts which I cut to size and painted black. I also added 50cm tall legs to raise the lights off the ground for better visibility and aluminium flat bar cross brackets between each leg for stability.
+                </div>
+            </section>
+            <section class="case-study-section section-wide-width xl-gap-below">
+                <div class="case-study-img-gallery">
+                    <div class="gallery-images" id="when-in-dome-gallery-0">
+                        <img id="when-in-dome-gallery-0-0-image" src="../projects/images/when-in-dome/when-in-dome-making-0.jpg" alt="Painting geodesic dome struts">
+                        <img id="when-in-dome-gallery-0-1-image" src="../projects/images/when-in-dome/when-in-dome-making-1.jpg" alt="Attaching connectors to geodesic dome struts">
+                        <img id="when-in-dome-gallery-0-2-image" src="../projects/images/when-in-dome/when-in-dome-making-2.jpg" alt="Geodesic dome built">
+                    </div>
+                    <div class="gallery-caption" id="when-in-dome-gallery-0-captions">
+                        <div id="when-in-dome-gallery-0-caption-0">Painting the geodesic dome struts</div>
+                        <div id="when-in-dome-gallery-0-caption-1">Attaching connectors to the struts</div>
+                        <div id="when-in-dome-gallery-0-caption-2">Geodesic dome</div>
+                    </div>
+                    <div class="gallery-thumbnails" id="when-in-dome-gallery-0-thumbnails"></div>
+                </div>
+            </section>
+
+            <section class="case-study-section section-main-width">
+                <div class="case-study-text">
+                    <h4 class="case-study-content-title">Planning the lights</h4>
+                    I used SketchUp to plan the visual layout of the lights in 3D and created several options for the strip placements. The layout had to take into account aesthetics and also distribution of power and data. I used 11 Fadecandys and 11 power supplies to cover the 33 triangles of the dome. 
+                    
+                </div>
+            </section>
+
+            <section class="case-study-section section-wide-width xl-gap-below">
+                <div class="case-study-img-gallery">
+                    <div class="gallery-images" id="when-in-dome-gallery-1">
+                        <img id="when-in-dome-gallery-1-0-image" src="../projects/images/when-in-dome/when-in-dome-electronics-0.png" alt="3D model for LED strip layout">
+                        <img id="when-in-dome-gallery-1-1-image" src="../projects/images/when-in-dome/when-in-dome-electronics-1.png" alt="Planning LED panel layout">
+                        <img id="when-in-dome-gallery-1-2-image" src="../projects/images/when-in-dome/when-in-dome-electronics-2.png" alt="Full LED map">
+                    
+                    </div>
+                    <div class="gallery-caption" id="when-in-dome-gallery-1-captions">
+                        <div id="when-in-dome-gallery-1-caption-0">3D model of the geodesic dome, created in Sketchup, to plan LED layout aesthetically</div>
+                        <div id="when-in-dome-gallery-1-caption-1">Planning the LED and cable layout on the triangle panels. Each Fadecandy can drive up to 8 strips of 64 pixels each, so the lines on the panels were divided over these strips</div>
+                        <div id="when-in-dome-gallery-1-caption-2">Flattened view of the surface of the dome, showing LED, power and Fadecandy layout. Each triangle, power supply and Fadecandy are numbered and this plan was used for each setup build.</div>
+
+                    </div>
+                    <div class="gallery-thumbnails" id="when-in-dome-gallery-1-thumbnails"></div>
                 </div>
             </section>
 
             
-
-            <!-- Section 2: Approach / Process -->
-            <section class="content-section">
-                <h2>Approach</h2>
-                <p>
-                    I conducted user research with 24 patients and 8 administrative staff members to 
-                    understand pain points in the current system. Key insights included:
-                </p>
-                <ul>
-                    <li>Patients wanted visual confirmation of their appointments</li>
-                    <li>Reminders needed to be multi-channel (SMS, email, phone)</li>
-                    <li>The system needed to feel simple and trustworthy</li>
-                    <li>Staff needed efficient ways to manage cancellations and rescheduling</li>
-                </ul>
-                <p>
-                    Through co-design workshops and iterative prototyping, I developed a service blueprint 
-                    that mapped the entire appointment journey, identifying opportunities for digital 
-                    intervention while maintaining human touchpoints for those who needed them.
-                </p>
-
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-1/prototypes.jpg" alt="Design iterations"> -->
-                    Design iterations / Prototypes
-                </div>
-
-                <p>
-                    The design process involved testing three different approaches with users, ranging 
-                    from a fully automated system to a hybrid model. The hybrid approach tested best, 
-                    balancing efficiency with the personal care patients expected from healthcare services.
-                </p>
-
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-1/final-screens.jpg" alt="Final interface"> -->
-                    Final interface / Key screens
-                </div>
-            </section>
-
-            <!-- Section 3: Outcome / Results -->
-            <section class="content-section">
-                <h2>Outcome</h2>
-                <p>
-                    The redesigned system launched as a pilot program in two clinics, with measurable 
-                    improvements within the first three months:
-                </p>
-                <ul>
-                    <li>42% reduction in missed appointments</li>
-                    <li>65% decrease in appointment-related phone calls</li>
-                    <li>88% patient satisfaction rating (up from 62%)</li>
-                    <li>Average booking time reduced from 8 minutes to 2 minutes</li>
-                </ul>
-                <p>
-                    The service is now being rolled out across the entire health network. The project 
-                    demonstrated the importance of designing for accessibility and maintaining human 
-                    connection in digital healthcare experiences.
-                </p>
-                <p>
-                    Key learnings included the value of service design thinking in digital products, 
-                    the importance of designing for the full ecosystem (patients, staff, and systems), 
-                    and the need to validate assumptions through testing with diverse user groups.
-                </p>
-            </section>
-        </article>
 
         <!-- More Projects Section -->
         <section class="more-projects">

@@ -170,3 +170,59 @@
     window.addEventListener('scroll', checkTitleStick, { passive: true });
     checkTitleStick();
 })();
+
+
+/* Case study: image gallery */
+// Create thumbnails for each image in the gallery
+let galleries = [
+    "when-in-dome-gallery-0",
+    "when-in-dome-gallery-1",
+];
+
+galleries.forEach(gallery => {
+    
+    let images = document.querySelectorAll(`#${gallery} img`);
+    if (images.length == 0) return;
+
+    let w = images[0].width;
+
+    let captionHolder = document.getElementById(`${gallery}-captions`);
+    captionHolder.style.width = `${w}px`;
+
+    let thumbnailHolder = document.getElementById(`${gallery}-thumbnails`);
+
+    let i = 0;
+    images.forEach(image => {
+        let thumbnail = document.createElement('img');
+        thumbnail.src = image.src;
+        thumbnail.alt = image.alt;
+        thumbnail.id = `${gallery}-${i}`;
+
+        if (i == 0) thumbnail.classList.add('active');
+
+        thumbnailHolder.appendChild(thumbnail);
+
+        thumbnail.addEventListener('click', function() {
+            let thisIndex = thumbnail.id.split('-')[thumbnail.id.split('-').length - 1];
+
+            let images = document.querySelectorAll(`#${gallery} img`);
+            let thumbnails = document.querySelectorAll(`#${gallery}-thumbnails img`);
+            let captions = document.querySelectorAll(`#${gallery}-captions div`);
+            let thisCaption = document.getElementById(`${gallery}-caption-${thisIndex}`);
+
+            images.forEach(image => image.style.display = 'none');
+            image.style.display = 'block';
+
+            let w = image.width;
+            let captionHolder = document.getElementById(`${gallery}-captions`);
+            captionHolder.style.width = `${w}px`;
+
+            captions.forEach(caption => caption.style.display = 'none');
+            thisCaption.style.display = 'block';
+
+            thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
+            thumbnail.classList.add('active');
+        });
+        i++;
+    });
+});
