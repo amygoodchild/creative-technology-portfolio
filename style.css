@@ -10,7 +10,7 @@
 
 :root {
     /* Color Variables - Change these to customize your palette */
-    --color-bg: #e7e7e7;
+    --color-bg: #f6f6f6;
     --color-bg-dark: #0d0d0d;
     --color-bg-secondary: #d3d3d3;
     --color-bg-tertiary: #d6e9e9;
@@ -42,7 +42,7 @@
     
     /* Layout */
     --max-width: 1200px;
-    --border-radius: 5px;
+    --border-radius: 15px;
 
 }
 
@@ -751,6 +751,7 @@ h4.case-study-content-title {
 .case-study-img-gallery .gallery-images img{
     display: none;
     width: 100%;
+    max-width: 1000px;
     height: auto;
     max-height: 65vh;
     width: auto;
