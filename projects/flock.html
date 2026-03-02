@@ -3,172 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organic Flow Fields | Your Name</title>
+    <title>XXX - Project Title | Amy Goodchild</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../image-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@050;100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@50;100;200;300;400;600;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
-    <main class="container">
-        <a href="../index.html" class="back-link">Back to home</a>
+    <main class="project-content-wrapper">
+
+        <nav class="main-nav" id="main-nav">
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="mailto:amy@amygoodchild.com">Contact</a>
+            </div>
+        </nav>
+
+        <div class="secondary-nav">
+            <a href="https://www.instagram.com/amy_goodchild" class="secondary-nav-link instagram" target="_blank"></a>
+            <a href="https://amygoodchild.substack.com/" class="secondary-nav-link substack" target="_blank"></a>
+
+
+        </div>
+        
 
         <!-- Hero Section -->
-        <section class="case-study-hero">
-            <h1>Organic Flow Fields</h1>
-            
-            <div class="hero-image">
-                <!-- Replace with: <img src="images/project-2/hero.jpg" alt="Artwork preview"> -->
-                Generated artwork preview / Animation still
-            </div>
-
-            <div class="case-study-meta">
-                <div class="meta-item">
-                    <span class="meta-label">Medium</span>
-                    <span>Generative Art / p5.js</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Timeline</span>
-                    <span>Ongoing (2024-present)</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Exhibition</span>
-                    <span>Digital Arts Festival 2025</span>
-                </div>
-            </div>
+        <div class="case-study-sticky-header">
+            <a href="../index.html" class="hero-name">Amy Goodchild</a>
+        </div>
+        <section class="case-study-hero hero-image-xxx">
+            <h1 class="case-study-hero-title" id="case-study-hero-title">XXX - Project Title</h1>
         </section>
 
         <!-- Content Sections -->
         <article class="case-study-content">
-            <!-- Section 1: Concept / Inspiration -->
-            <section class="content-section">
-                <h2>Concept</h2>
-                <p>
-                    Organic Flow Fields explores the intersection of natural movement patterns and 
-                    computational aesthetics. The project investigates how simple algorithmic rules 
-                    can generate complex, organic-feeling motion that mirrors patterns found in nature: 
-                    fluid dynamics, bird murmurations, wind through grass.
-                </p>
-                <p>
-                    Inspired by the work of pioneers in generative art and the mathematical beauty of 
-                    Perlin noise, the series creates real-time animations where thousands of particles 
-                    move through invisible force fields, their paths creating ephemeral drawings that 
-                    exist only for a moment before transforming into something new.
-                </p>
+            <section class="case-study-section section-main-width">
 
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-2/exploration.jpg" alt="Early explorations"> -->
-                    Early exploration / Sketch iterations
+                <div class="case-study-columns">
+                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
+                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
+                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
+                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
+                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
+                </div>
+                <div class="case-study-intro-text">
+                    <i>Lorem ipsum</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae lectus ex. Duis mauris odio, egestas ac auctor quis, faucibus quis odio. Donec sodales erat a fermentum pretium. Donec vel ex ac neque scelerisque fermentum.
+                </div>
+                <div class="case-study-tags">
+                    <div class="case-study-tag">Tag</div>
+                    <div class="case-study-tag">Skill</div>
+                    <div class="case-study-tag">Technology</div>
+                    <div class="case-study-tag">Skill</div>
+                    <div class="case-study-tag">Technology</div>
+                    <div class="case-study-tag">Skill</div>
+                    <div class="case-study-tag">Technology</div>
+                    <div class="case-study-tag">Skill</div>
                 </div>
             </section>
 
-            <!-- Section 2: Technical Approach -->
-            <section class="content-section">
-                <h2>Technical Approach</h2>
-                <p>
-                    The system uses a combination of Perlin noise fields and particle systems to 
-                    create emergent behavior. Each particle reads its local position in a multi-dimensional 
-                    noise space, which determines its velocity vector. Parameters include:
-                </p>
-                <ul>
-                    <li>Noise scale: Controls the "smoothness" of the flow field</li>
-                    <li>Particle count: Balancing visual density with performance</li>
-                    <li>Trail length: Creating motion blur through alpha blending</li>
-                    <li>Color evolution: Time-based palette shifts</li>
-                </ul>
-                <p>
-                    Rather than pre-rendering frames, the work exists as living code that generates 
-                    unique outputs each time it runs. The algorithm includes subtle randomization, 
-                    meaning no two viewings produce identical results—each instance is a unique artwork.
-                </p>
+            <!-- Video only -->
+            <section class="case-study-section section-wide-width">
+                <video class="case-study-visual" src="../projects/images/project-folder/video.mp4" autoplay controls loop muted playsinline></video>
+            </section>
 
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-2/flow-field.jpg" alt="Flow field visualization"> -->
-                    Code structure / Flow field visualization
-                </div>
-
-                <p>
-                    Performance optimization was crucial for smooth, real-time animation. I implemented 
-                    techniques like spatial hashing for neighbor detection and quadtree data structures 
-                    to manage particle interactions efficiently, maintaining 60fps even with 10,000+ particles.
-                </p>
-
-                <div class="content-image">
-                    <!-- Replace with: <img src="images/project-2/variations.jpg" alt="Output variations"> -->
-                    Output variations / Generated stills
+            <!-- Text only -->
+            <section class="case-study-section section-main-width">
+                <div class="case-study-text">
+                    Integer bibendum nibh ipsum, et ornare sem lobortis vitae. Aenean mollis tempus magna, id porttitor tellus pulvinar in. Duis dui turpis, viverra at elit nec.<br><br>
+                    Tempor pulvinar neque. Vivamus laoreet nisi vitae nulla varius, id faucibus enim placerat. Fusce vel diam quam. 
                 </div>
             </section>
 
-            <!-- Section 3: Exhibition & Response -->
-            <section class="content-section">
-                <h2>Exhibition & Response</h2>
-                <p>
-                    The work was exhibited at the 2025 Digital Arts Festival, displayed on a large 
-                    vertical screen in a darkened space. Viewers could influence parameters through 
-                    subtle gestures, though the system maintained its autonomous behavior—a collaboration 
-                    between artist, algorithm, and audience.
-                </p>
-                <p>
-                    Viewer responses highlighted the meditative quality of watching the particles flow, 
-                    with many commenting on the "almost alive" feeling of the movement. The work sparked 
-                    conversations about agency in generative systems and where authorship lies when code 
-                    makes aesthetic decisions.
-                </p>
-                <p>
-                    The project continues to evolve, with recent experiments incorporating:
-                </p>
-                <ul>
-                    <li>3D flow fields using three.js</li>
-                    <li>Audio reactivity, where sound influences particle behavior</li>
-                    <li>Machine learning to evolve interesting parameter combinations</li>
-                    <li>Print outputs using pen plotters for physical artifacts</li>
-                </ul>
-                <p>
-                    This exploration has deepened my understanding of how computation can be a creative 
-                    medium in itself, not just a tool but a collaborator in the artistic process.
-                </p>
+
+            <!-- Text and one image -->
+            <section class="case-study-section section-main-width">
+                <div class="case-study-text">
+                    Nullam accumsan lacus nunc. Nam et enim ligula. Donec vitae odio eu ipsum bibendum efficitur ac vitae orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                </div>
             </section>
-        </article>
+            <section class="case-study-section section-main-width">
+                <div class="case-study-img-gallery one-wide">
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- More Projects Section -->
-        <section class="more-projects">
-            <h2>More Projects</h2>
-            <div class="more-projects-grid">
-                <!-- Change these to link to other projects -->
-                <article class="more-project-card">
-                    <a href="project-1.html">
-                        <div class="more-project-image">
-                            <div class="placeholder-image">Project 1</div>
-                        </div>
-                        <div class="more-project-info">
-                            <h3>Healthcare Appointment System</h3>
-                            <p class="project-type">UX/Service Design</p>
-                        </div>
-                    </a>
-                </article>
 
-                <article class="more-project-card">
-                    <a href="project-3.html">
-                        <div class="more-project-image">
-                            <div class="placeholder-image">Project 3</div>
-                        </div>
-                        <div class="more-project-info">
-                            <h3>Project Title</h3>
-                            <p class="project-type">Project Type</p>
-                        </div>
-                    </a>
-                </article>
+     
+            <!-- Text and two images -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
+                    Nulla sem magna, molestie non risus non, aliquam sodales dui. Praesent fringilla sapien eget lectus volutpat semper. Ut iaculis varius orci in feugiat.
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                </div>
+            </section>
 
-                <article class="more-project-card">
-                    <a href="project-4.html">
-                        <div class="more-project-image">
-                            <div class="placeholder-image">Project 4</div>
-                        </div>
-                        <div class="more-project-info">
-                            <h3>Project Title</h3>
-                            <p class="project-type">Project Type</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
+            <!-- Text and three images --> 
+            <!-- Third image drops to its own row and is larger -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">Section title</h4>
+                    Nullam cursus elementum est at porta. Proin viverra quis nisi id luctus. Donec pellentesque odio mauris, ac dapibus lacus vehicula eget. Curabitur eget massa et est malesuada lacinia. Etiam ac pulvinar turpis. Quisque semper, nunc eget dignissim faucibus, metus erat facilisis leo, eget bibendum lorem ex pulvinar nibh. 
+                </div>
+  
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Text and four images -->
+            <section class="case-study-section section-full-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
+                    Quisque nisl felis, pharetra ac imperdiet in, pharetra pellentesque nisi. Ut ultrices risus lacus, luctus rutrum est ultrices vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+                <div class="case-study-img-gallery four-wide">
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <div class="caption">Caption</div>
+                    </div>                                     
+                </div>
+            </section>
     </main>
 
     <!-- Footer -->
@@ -185,5 +186,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../nav-script.js"></script>
 </body>
 </html>
