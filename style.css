@@ -740,10 +740,21 @@ h4.case-study-content-title {
     color: var(--color-text-secondary);
 }
 
+.case-study-text a{
+    color: var(--color-highlight-1);
+    text-decoration: underline;
+}
+
+.case-study-text a:hover{
+    color: var(--color-highlight-2);    text-decoration: underline;
+}
+
+
 .case-study-img-gallery {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
     align-items: center;
     justify-content: center;
@@ -759,16 +770,24 @@ h4.case-study-content-title {
     gap: 10px;
 }
 
-.case-study-img-gallery .two-wide .gallery-img{
-    width: 50%;
+.four-wide{
+    gap: 20px;
 }
 
-.case-study-img-gallery .one-wide .gallery-img{
+.two-wide .gallery-img{
+    width: calc(50% - 20px); /* 50% minus half the 40px gap */
+}
+
+.case-study-img-gallery .solo-img{
+    width: 75%;
+}
+
+.one-wide .gallery-img{
     width: 100%;
 }
 
-.case-study-img-gallery .four-wide .gallery-img{
-    width: 25%;
+.four-wide .gallery-img{
+    width: calc(25% - 20px);
 }
 
 .case-study-img-gallery .gallery-img img{
