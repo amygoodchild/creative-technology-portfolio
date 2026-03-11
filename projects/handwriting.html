@@ -32,8 +32,6 @@
         <div class="secondary-nav">
             <a href="https://www.instagram.com/amy_goodchild" class="secondary-nav-link instagram" target="_blank"></a>
             <a href="https://amygoodchild.substack.com/" class="secondary-nav-link substack" target="_blank"></a>
-
-
         </div>
         
 
@@ -41,49 +39,71 @@
         <div class="case-study-sticky-header">
             <a href="../index.html" class="hero-name">Amy Goodchild</a>
         </div>
-        <section class="case-study-hero hero-image-xxx">
-            <h1 class="case-study-hero-title" id="case-study-hero-title">XXX - Project Title</h1>
+        <section class="case-study-hero hero-image-handwriting">
+            <h1 class="case-study-hero-title" id="case-study-hero-title">Handwriting</h1>
         </section>
 
         <!-- Content Sections -->
         <article class="case-study-content">
             <section class="case-study-section section-main-width">
-
-                <div class="case-study-columns">
-                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
-                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
-                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
-                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
-                    <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
-                </div>
                 <div class="case-study-intro-text">
-                    <i>Lorem ipsum</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae lectus ex. Duis mauris odio, egestas ac auctor quis, faucibus quis odio. Donec sodales erat a fermentum pretium. Donec vel ex ac neque scelerisque fermentum.
+                    I recreated my handwriting in JavaScript, using only a handful of defined points for each letter. The points are passed through a couple of algorithms to turn them into natural, variable width wordforms with variety and ligatures.
                 </div>
                 <div class="case-study-tags">
-                    <div class="case-study-tag">Tag</div>
-                    <div class="case-study-tag">Skill</div>
-                    <div class="case-study-tag">Technology</div>
-                    <div class="case-study-tag">Skill</div>
-                    <div class="case-study-tag">Technology</div>
-                    <div class="case-study-tag">Skill</div>
-                    <div class="case-study-tag">Technology</div>
-                    <div class="case-study-tag">Skill</div>
+                    <div class="case-study-tag">JavaScript</div>
+                    <div class="case-study-tag">p5.js</div>
+                    <div class="case-study-tag">plotting</div>
                 </div>
             </section>
 
             <!-- Video only -->
             <section class="case-study-section section-wide-width">
-                <video class="case-study-visual" src="../projects/images/project-folder/video.mp4" autoplay controls loop muted playsinline></video>
+                <video class="case-study-visual" src="../projects/images/handwriting/handwriting-video-2.mp4" autoplay controls loop muted playsinline></video>
             </section>
 
             <!-- Text only -->
-            <section class="case-study-section section-main-width">
-                <div class="case-study-text">
-                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
-                    Integer bibendum nibh ipsum, et ornare sem lobortis vitae. Aenean mollis tempus magna, id porttitor tellus pulvinar in. Duis dui turpis, viverra at elit nec.<br><br>
-                    Tempor pulvinar neque. Vivamus laoreet nisi vitae nulla varius, id faucibus enim placerat. Fusce vel diam quam. 
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">Defining the letters</h4>
+                    Each letter is defined by a small number points, which means the file size for the handwriting code is relatively small and defining new letters is quick. 
+                    
+                    The points are curved into smooth paths using Chaikin's curve algorithm and then turned into a shape so that they can have a varied width. 
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img src="../projects/images/handwriting/simple-letter-paths.png" alt="alttext">
+                        <div class="caption">Letter paths</div>
+                    </div>
+                    <div class="media-content">
+                        <video class="case-study-visual border" src="../projects/images/handwriting/curve-simple-path.mp4" autoplay controls loop muted playsinline></video>
+                        <div class="caption">Curve algorithm on a simple path</div>
+                    </div> 
                 </div>
             </section>
+
+            <section class="case-study-section section-main-width">
+                <div class="case-study-text section-main-width">
+                    I created a small tool to define letters quickly, by clicking out the paths and then exporting the point positions as an array. In this tool I could also upload a photograph sample of my handwriting to trace.
+                </div>
+                <div class="case-study-img-gallery one-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/handwriting/letter-tool.png" alt="alttext">
+                        <div class="caption">Letter tool</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-img-gallery one-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/handwriting/curved-letter-paths.png" alt="alttext">
+                        <div class="caption">Curved letter paths</div>
+                    </div>
+                </div>
+            </section>
+
+
 
 
             <!-- Text and one image -->
@@ -94,7 +114,7 @@
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                 </div>
@@ -110,11 +130,11 @@
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                 </div>
@@ -130,15 +150,15 @@
   
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                 </div>
@@ -153,19 +173,19 @@
                 </div>
                 <div class="case-study-img-gallery four-wide">
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/project-folder/image.png" alt="alttext">
+                        <img src="../projects/images/handwriting/image.png" alt="alttext">
                         <div class="caption">Caption</div>
                     </div>                                     
                 </div>
@@ -180,7 +200,7 @@
                 </div>
                 
                 <div class="media-content">
-                    <video class="case-study-visual" src="../projects/images/project-folder/video.mp4" autoplay controls loop muted playsinline></video>
+                    <video class="case-study-visual" src="../projects/images/handwriting/video.mp4" autoplay controls loop muted playsinline></video>
                     <div class="caption">caption</div>
                 </div> 
             </section>

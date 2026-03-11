@@ -720,6 +720,11 @@ h4.case-study-content-title {
     border-radius: var(--border-radius);
 }
 
+.case-study-visual-50{
+    max-height: 500px;
+    max-width: 500px;
+}
+
 .case-study-intro-text {
     font-size: 1.3rem;
     font-weight: 400;
