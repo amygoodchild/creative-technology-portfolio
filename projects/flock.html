@@ -57,7 +57,7 @@
                 </div>
                 <div class="case-study-intro-text">
                     <i>Flock</i> is a multiplayer online art experience, where people create clouds of bubbles and play with them. Simultaneous visitors are paired up to play together - an opportunity for a socially distanced connection with a stranger.<br><br>
-                    I created this project for fun during lockdown.
+                    I created this personal project during lockdown.
                 </div>
                 <div class="case-study-tags">
                     <div class="case-study-tag">HTML</div>
@@ -80,7 +80,7 @@
                 <div class="case-study-text">
                     <h4 class="case-study-content-title">Concept</h4>
                     I'm fascinated by the possibilities within multi-user interaction. During lockdown I created this online art project to provide people with a way to experience human connection even at a distance.<br><br>
-                    People landing on the site at the same time, are paired up to play together. They throw bubbles around the screen which interact with each other. 
+                    People landing on the site at the same time are paired up to play together. They throw bubbles around the screen which interact with each other. 
                 </div>
             </section>
 
@@ -91,88 +91,158 @@
                     <h4 class="case-study-content-title">Visuals</h4>
                     I used p5js to code the main visuals in Flock.<br><br>
                     The bubbles have various behaviours that are inspired by flocking algorithms as developed by Craig Reynolds and previously coded by Daniel Shiffman. Each bubble looks at others nearby and adjusts its own behaviour based on three metrics, alignment (moving in a similar direction), cohesion (moving towards a similar position) and separation (not getting too close).<br><br>
-                    Some randomness and nuance is also introduced using Perlin noise to add wiggle to the movement.
+                    I also introduced some randomness to the movements using Perlin noise to add wiggle to the movement.<br><br>
+                    Adjusting these settings for each individual bubble creates different effects across the whole flock. 
                 </div>
+                <div class="media-content">
+                    <video class="case-study-visual" src="../projects/images/flock/flock-video2.mp4" autoplay controls loop muted playsinline></video>
+                    <div class="caption">Different flocking settings</div>
+                </div> 
             </section>
+
+
+            <!-- Text and one image -->
             <section class="case-study-section section-main-width">
+                <div class="case-study-text">
+                    <h4 class="case-study-content-title">Connections with nodeJS and websockets</h4>
+                    The fun thing about Flock is that users get paired up so they can interact with each other as they play with the bubbles.<br><br>
+                    I built a NodeJS backend, hosted it on Heroku, and used socket.io to pass messages back and forth over websockets. The server handles pairings, including timing out if someone's not interacting, and sending information between users. <br><br>
+                    The bubbles from both participants appear in the same space and interact with each other, creating a shared visual experience.
+                </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img src="../projects/images/flock/flock-connections.png" alt="alttext">
+                        <div class="caption">Technologies used in Flock</div>
                     </div>
                 </div>
             </section>
 
 
-     
             <!-- Text and two images -->
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
-                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
-                    Nulla sem magna, molestie non risus non, aliquam sodales dui. Praesent fringilla sapien eget lectus volutpat semper. Ut iaculis varius orci in feugiat.
+                    <h4 class="case-study-content-title">Human connections</h4>
+                    Flock hit the front page of reddit and seemed to genuinely touch people. I think this was especially true as this was during lockdown, a time when many were missing human connection.<br><br>
+                    One participant even said they felt like they had fallen in love with the person they were paired with, and lightheartedly referred to them as their soulmate.
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img class="border" src="../projects/images/flock/feedback3.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img class="border" src="../projects/images/flock/feedback1.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/feedback2.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/feedback4.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Text and three images --> 
-            <!-- Third image drops to its own row and is larger -->
+            <!-- Text and two images -->
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
-                    <h4 class="case-study-content-title">Section title</h4>
-                    Nullam cursus elementum est at porta. Proin viverra quis nisi id luctus. Donec pellentesque odio mauris, ac dapibus lacus vehicula eget. Curabitur eget massa et est malesuada lacinia. Etiam ac pulvinar turpis. Quisque semper, nunc eget dignissim faucibus, metus erat facilisis leo, eget bibendum lorem ex pulvinar nibh. 
+                    <h4 class="case-study-content-title">Responding to feedback</h4>
+                    Some commenters had suggestions for the app, which I implemented.<br><br>
+                    One person asked for pairing to be optional, saying it had given them some anxiety to be paired automatically and that they wanted to try it out alone first. This made a lot of sense so I added a dialogue box on pageload, that allowed users to opt out of pairing.
                 </div>
-  
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img class="border" src="../projects/images/flock/pairing feedback.png" alt="alttext">
+                        <div class="caption">Pairing feedback</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
-                    </div>
-                    <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img src="../projects/images/flock/pairing dialogue.png" alt="alttext">
+                        <div class="caption">Pairing dialogue added in response to feedback</div>
                     </div>
                 </div>
             </section>
 
-
-            <!-- Text and four images -->
-            <section class="case-study-section section-full-width">
+            <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
-                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
-                    Quisque nisl felis, pharetra ac imperdiet in, pharetra pellentesque nisi. Ut ultrices risus lacus, luctus rutrum est ultrices vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Another commenter said they felt bad to leave without saying goodbye. I didn't want to open up the possibility of full conversation but I added an option in the menus which floats a "goodbye" message on your partners screen.
                 </div>
-                <div class="case-study-img-gallery four-wide">
+                <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img class="border" src="../projects/images/flock/goodbye feedback.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
                     </div>
                     <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img src="../projects/images/flock/goodbye.png" alt="alttext">
+                        <div class="caption">Goodbye message floating up the screen</div>
                     </div>
-                    <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
-                    </div>
-                    <div class="media-content">
-                        <img src="../projects/images/flock/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
-                    </div>                                     
                 </div>
             </section>
+
+
+
+            <!-- Text and two images -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">Analytics</h4>
+                    I used Google analytics to track use of the site and tagged particular JavaScript events with Google Event Tags so I could dive into detailed evaluation of behaviour on the site.<br><br>
+                    There were over 86k "pair events" and it's pretty cool to think about all those people who were connected.<br><br>
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/analytics 1.png" alt="alttext">
+                        <div class="caption">Visits over the first couple of days</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/analytics 2.png" alt="alttext">
+                        <div class="caption">Pairing events organised by count for each user</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Text and two images -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    Once I implemented the option to opt out of pairing, around 20% of people chose that initially and then many chose to change their pairing mode and go on to play paired up.<br><br> It felt good to know I'd allowed those people to enter the experience feeling more comfortable.
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/analytics 3.png" alt="alttext">
+                        <div class="caption">Initial pairing choices</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/analytics 4.png" alt="alttext">
+                        <div class="caption">Changing pairing mode</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Text and two images -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    Some final feedback from reddit:
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/feedback5.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/feedback6.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/flock/feedback7.png" alt="alttext">
+                        <div class="caption">reddit comment</div>
+                    </div>
+                </div>
+            </section>
+
+
+
     </main>
 
     <!-- Footer -->

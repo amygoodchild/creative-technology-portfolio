@@ -23,3 +23,11 @@
 .hero-image-flock{
     background-image: url('../projects/images/flock/flock-hero.png');
 }
+
+.intro-image-handwriting {
+    background-image: url('../projects/images/handwriting/handwriting-thumb-2.png');
+}
+
+.hero-image-handwriting{
+    background-image: url('../projects/images/handwriting/handwriting-hero.png');
+}
