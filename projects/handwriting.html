@@ -40,19 +40,21 @@
             <a href="../index.html" class="hero-name">Amy Goodchild</a>
         </div>
         <section class="case-study-hero hero-image-handwriting">
-            <h1 class="case-study-hero-title" id="case-study-hero-title">Handwriting</h1>
+            <h1 class="case-study-hero-title" id="case-study-hero-title">Coded writing</h1>
         </section>
 
         <!-- Content Sections -->
         <article class="case-study-content">
             <section class="case-study-section section-main-width">
                 <div class="case-study-intro-text">
-                    I recreated my handwriting in JavaScript, using only a handful of defined points for each letter. The points are passed through a couple of algorithms to turn them into natural, variable width wordforms with variety and ligatures.
+                    I built a handwriting engine in JavaScript that converts text into manipulatable paths, enabling morphing and animation, and have used it in multiple physical and web-based works.  <br><br>
+                    I've integrated this with procedural text generation, exploring the gap between meaning and nonsense, in a space conceptually and technically adjacent to LLMs. 
                 </div>
                 <div class="case-study-tags">
                     <div class="case-study-tag">JavaScript</div>
                     <div class="case-study-tag">p5.js</div>
                     <div class="case-study-tag">plotting</div>
+                    <div class="case-study-tag">procedural text generation</div>
                 </div>
             </section>
 
@@ -65,9 +67,9 @@
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Defining the letters</h4>
-                    Each letter is defined by a small number points, which means the file size for the handwriting code is relatively small and defining new letters is quick. 
+                    Each letter is defined by a small number of points, which means the file size for the handwriting code is relatively small and defining new letters is quick. 
                     
-                    The points are curved into smooth paths using Chaikin's curve algorithm and then turned into a shape so that they can have a varied width. 
+                    The points are curved into smooth paths using Chaikin's curve algorithm and then turned into a shape, so they can have varied width. 
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
@@ -83,7 +85,7 @@
 
             <section class="case-study-section section-main-width">
                 <div class="case-study-text section-main-width">
-                    I created a small tool to define letters quickly, by clicking out the paths and then exporting the point positions as an array. In this tool I could also upload a photograph sample of my handwriting to trace.
+                    I created a tool to define letters quickly, by clicking out paths and exporting point positions as an array. 
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -104,21 +106,52 @@
             </section>
 
 
-
-
-            <!-- Text and one image -->
+    
             <section class="case-study-section section-main-width">
                 <div class="case-study-text">
-                    <h4 class="case-study-content-title">XXXX - Section heading</h4>
-                    Nullam accumsan lacus nunc. Nam et enim ligula. Donec vitae odio eu ipsum bibendum efficitur ac vitae orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                    <h4 class="case-study-content-title">Ligature logic</h4>
+                    Some pairs of letters can be easily joined while others do not automatically work nicely together. Here are two examples of problematic letter pairs, creating a path through the centre of the "a" and a bump between the "t" and "i".
                 </div>
-                <div class="case-study-img-gallery one-wide">
+                <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
-                        <img src="../projects/images/handwriting/image.png" alt="alttext">
-                        <div class="caption">Caption</div>
+                        <img class="border" src="../projects/images/handwriting/bad-letter-pair-1.png" alt="problematic letter pair 'na', showing how the natural path to join them slices through the a">
+                        <div class="caption">Problematic letter pair "na"</div>
+                    </div>
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/handwriting/bad-letter-pair-2.png" alt="problematic letter pair 'ti', showing how the natural path to join them creates a bump">
+                        <div class="caption">Problematic letter pair "ti"</div>
                     </div>
                 </div>
             </section>
+
+
+            <!-- Text and one image -->
+            <section class="case-study-section section-wide-width">
+                <div class="case-study-text section-main-width">
+                    I assigned each letter one of four join types for the beginning and end of the path - no join, baseline, just above baseline and x-height. Then, where necessary, I gave each letter rules for how it should join to the other join types. 
+                </div>
+                <div class="case-study-img-gallery one-wide">
+                    <div class="media-content">
+                        <img class="border" src="../projects/images/handwriting/good-letter-pairs.png" alt="alttext">
+                        <div class="caption">Testing letter pairs</div>
+                    </div>
+                </div>
+            </section>
+
+           <!-- Text and one image -->
+           <section class="case-study-section section-wide-width">
+            <div class="case-study-img-gallery one-wide">
+                <div class="media-content">
+                    <img class="border" src="../projects/images/handwriting/side-by-side.png" alt="alttext">
+                    <div class="caption">A side by side comparison of my handwriting with the coded version, drawn by an Axidraw plotter</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
 
 
      
