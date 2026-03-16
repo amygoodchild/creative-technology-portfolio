@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amy Goodchild | Creative Technologist</title>
+    <title>Amy Goodchild | Digital Experiences</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="image-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
@@ -43,8 +43,12 @@
         <header class="hero-content">
             <div class="hero-name">Amy Goodchild</div>
 
-            <h1 class="hero-title">Creative technologist</h1>
-            <div class="hero-tagline">from concept to code</div>
+            <h1 class="hero-title">Hello, I make digital and physical experiences</h1>
+            <div class="hero-jobtitles">
+                <div class="hero-tagline">creative technologist</div>
+                <div class="hero-tagline">UX designer</div>
+                <div class="hero-tagline">user researcher</div>
+            </div>
             
         </header> 
 
@@ -54,7 +58,7 @@
             <div class="intro-title">About</div>
   
             <p class="intro-text">
-                I'm a creative technologist who designs and builds interactive experiences like installations, experimental web projects and prototypes, to push what's possible. I care about how people experience the work and I consider the audience in everything I do. <br><br>
+                I'm a UX expert and creative technologist who designs and builds interactive experiences like installations, experimental web projects and prototypes, to push what's possible. I care about how people experience the work and I consider the audience in everything I do. <br><br>
                 I'm comfortable moving between concept development and hands-on execution, whether that's designing, coding or building. I'm great at figuring out a new technology as we create.<br><br>
             </p>
         </section>
@@ -65,7 +69,7 @@
             <h2 class="section-title">Projects</h2>
             <div class="project-scroll-layout">
                 <div class="project-text-panel">
-                    <a class="project-text-item" href="projects/when-in-dome.html">
+                    <div class="project-text-item">
                         <div class="project-info-meta">
                             <h3 class="project-title">When in Dome</h3>
                             <div class="project-type">Physical Installation</div>
@@ -78,8 +82,9 @@
                             </div>
                         </div>
                         <p class="project-description">A geodesic dome filled with 4,378 LEDs, reacting to movement.</p>
-                    </a>
-                    <a class="project-text-item" href="projects/flock.html">
+                        <a href="projects/when-in-dome.html" class="project-button">Read about it</a>
+                    </div>
+                    <div class="project-text-item">
                         <div class="project-info-meta">
                             <h3 class="project-title">Flock</h3>
                             <div class="project-type">Browser-based artwork</div>
@@ -90,8 +95,9 @@
                             </div>
                         </div>
                         <p class="project-description">Interactive artwork that pairs visitors, via a custom built server-side app, to share a visual experience remotely.</p>
-                    </a>
-                    <a class="project-text-item" href="projects/handwriting.html">
+                        <a href="projects/flock.html" class="project-button">Read about it</a>
+                    </div>
+                    <div class="project-text-item">
                         <div class="project-info-meta">
                             <h3 class="project-title">Handwriting</h3>
                             <div class="project-type">Created in code</div>
@@ -101,7 +107,8 @@
                             </div>
                         </div>
                         <p class="project-description">Generated sentences written in my own coded handwriting</p>
-                    </a>
+                        <a href="projects/handwriting.html" class="project-button">Read about it</a>
+                    </div>
                 </div>
                 <div class="project-images-column">
                     <a class="project-image-link" href="projects/when-in-dome.html">
@@ -128,17 +135,23 @@
 
 
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Amy Goodchild</p>
+                <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
+                    <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="3" required></textarea>
+                    <button type="submit" class="contact-submit">Send</button>
+                </form>
                 <div class="footer-links">
                     <a href="mailto:amy@amygoodchild.com">Email</a>
                     <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- <script src="js/sketch.js"></script> -->
    <script src="nav-script.js"></script>

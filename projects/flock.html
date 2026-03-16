@@ -249,7 +249,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Your Name</p>
+                <form class="contact-form" action="https://formsubmit.co/amy@amygoodchild.com" method="POST">
+                    <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="3" required></textarea>
+                    <button type="submit" class="contact-submit">Send</button>
+                </form>
                 <div class="footer-links">
                     <a href="mailto:your.email@example.com">Email</a>
                     <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
