@@ -802,7 +802,12 @@ h4.case-study-content-title {
 .media-content img{
     width: 100%;
     border-radius: var(--border-radius);
+    /* max-height: 98vh; */
 }
+
+/* .media-content video{
+    max-height: 98vh;
+} */
 
 
 .media-content .caption{
