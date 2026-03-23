@@ -11,7 +11,8 @@
 :root {
     /* Color Variables - Change these to customize your palette */
     --color-bg: #fcfcfc;
-    --color-bg-dark: #0d0d0d;
+    --color-bg-dark: #141414;
+    --color-bg-less-dark: #363636;
     --color-bg-secondary: #d3d3d3;
     --color-bg-tertiary: #d6e9e9;
     --color-text: #0d0d0d;
@@ -191,8 +192,6 @@ a {
     opacity: 0;
     overflow: hidden;
     flex-shrink: 0;
-
-
 }
 
 .main-nav.nav-collapsed .nav-hamburger {
@@ -314,7 +313,6 @@ a {
     text-align: center;
     color: var(--color-text-secondary);
     margin-top: -60px;
-    display: none;
 }
 
 .hero-name{
@@ -367,9 +365,9 @@ a {
     align-items: flex-start;
     justify-content: center;
     width: 93%;
+    max-width: 1500px;
     height: 100%;
     gap: var(--spacing-lg);
-    display: none;
 }
 
 .intro-title {
@@ -396,6 +394,7 @@ a {
 
 .projects {
     width: 93%;
+    max-width: 1500px;
     margin-bottom: var(--spacing-xl);
     display: flex;
     flex-direction: column;
@@ -417,50 +416,64 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: start;
-    gap: 30px;
+    align-items: stretch;
+    gap: 40px 20px;
     justify-content: space-between;
     width: 100%;
     max-width: 1500px;
 }
 
 .project-thumb {
-    width: calc(33.33% - 30px);
+    width: calc(33.33% - 20px);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 6px solid var(--color-bg-dark);
-    border-radius: var(--border-radius);
+    align-items: stretch;
+    border: 2px solid var(--color-bg-dark);
 }
 
 .project-thumb-text {
+    flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--spacing-sm);
-    padding: 30px 30px 35px 30px
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-secondary);
+}
+
+.project-thumb-main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: var(--spacing-sm);
 }
 
 .project-intro-image {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     width: 100%;
     height: auto;
-    aspect-ratio: 1.6 / 1;
+    aspect-ratio: 1.4 / 1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .project-title {
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     font-weight: 800;
     font-family: var(--font-serif);
     color: var(--color-text-secondary);
     background-color: var(--color-bg-dark);
-    padding: 5px 10px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    width: fit-content;
+    position: relative;
 }
 
 .project-type {
@@ -473,7 +486,7 @@ a {
 }
 
 .project-description {
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     font-weight: 100;
     line-height: 1.5;
     margin-bottom: var(--spacing-xs);
@@ -481,9 +494,10 @@ a {
 
 
 .project-tags {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 8px;
+
 }
 
 .project-tag {
@@ -493,8 +507,8 @@ a {
     font-weight: 600;
     letter-spacing: 0.05em;
     padding: 3px 10px;
-    background-color: var(--color-bg-secondary);
-    color: var(--color-text);
+    background-color: var(--color-bg-less-dark);
+    color: var(--color-text-secondary);
 }
 
 
@@ -950,6 +964,19 @@ h4.case-study-content-title {
    RESPONSIVE DESIGN
    =================================== */
 
+@media (max-width: 1350px) {
+
+    .project-description {
+       font-size: 1.8rem;
+    }
+
+    .project-title{
+        font-size: 1.0rem;
+    }
+}
+
+
+
 @media (max-width: 1020px) {
 
     .tagline{
@@ -978,17 +1005,9 @@ h4.case-study-content-title {
 
 
     .projects {
-        width: 100%;
         margin-bottom: var(--spacing-xl);
     }
 
-    .project-text-item{
-        gap: var(--spacing-xs);
-    }
-
-    .project-title{
-        font-size: 1.5rem;
-    }
 
     .project-tag{
         font-size: 0.7rem;
@@ -998,16 +1017,21 @@ h4.case-study-content-title {
         gap: 0px;
     }
 
+    .project-thumb-holder{
+        gap: 40px;
+    }
+
+    .project-thumb{
+        width: calc(50% - 20px);
+    }
+
+    .project-thumb-text{
+        padding: var(--spacing-md);
+    }
+
     .project-description{
-        font-size: 1.1rem;
+        font-size: 1.6rem;
     }
-
-    .project-intro-image {
-        aspect-ratio: 1.2 / 1;
-        min-height: 45vh;
-    }
-
-
 
     .section-wide-width {
         width: 98%;
@@ -1109,12 +1133,12 @@ h4.case-study-content-title {
         border-bottom: none;
     }
 
-    .project-intro-image {
-        aspect-ratio: 1.8 / 1;
+
+
+    .project-thumb{
         width: 100%;
-        min-width: 280px;
-        min-height: auto;
     }
+    
 
 
 
