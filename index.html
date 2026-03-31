@@ -19,16 +19,16 @@
 
     <div class="main-content-wrapper">
         <!-- <div class="temp-hide"> -->
-        <nav class="main-nav" id="main-nav">
+        <nav class="main-nav">
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="mailto:amy@amygoodchild.com">Contact</a>
+                <a href="#work-target">Work</a>
+                <a href="#about-target">About</a>
+                <a href="#contact-target">Contact</a>
             </div>
         </nav>
 
@@ -40,27 +40,35 @@
         </div>
 
         <!-- <div id="p5-container"></div> -->
-        <header class="hero-content">
-            <div class="hero-name">Amy Goodchild</div>
+        <header class="hero-content" id="home-anchor">
+            <div class="hero-name"><a href="#home-anchor">Amy Goodchild</a></div>
 
-            <div class="hero-title">Hello,</div>
-            <div class="hero-title">I design & build experiences.</div>
+            <div class="hero-title">Hello!</div>
+            <div class="hero-tagline-wrap">
+                <span class="hero-tagline">My name is Amy, I design & build digital experiences.</span>
+            </div>
+            <a class="hero-button" href="#work-target">Have a look
+                <svg class="hero-button-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                    <path d="M6 14 l8 8 8 -8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M14 18 l0 -13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+                    
+                </svg>
+            </a>
             <!-- <div class="hero-jobtitles">
                 <div class="hero-tagline">creative technologist</div>
                 <div class="hero-tagline">UX designer</div>
                 <div class="hero-tagline">user researcher</div>
             </div> -->
-            
         </header> 
 
 
         <!-- Main Content -->
-        <section class="intro" id="about">
-            <div class="intro-title">About</div>
+        <section class="intro">
+            <div class="intro-title" id="about-target">About</div>
   
             <p class="intro-text">
-                I'm a <b>user experience designer</b> and <b>creative technologist</b>.
-                I create digital and physical experiences including apps, browser-based projects, physical installations and more.<br><br>
+                I'm a <b>creative technologist</b> and <b>user experience designer</b>.
+                I create digital and physical experiences including apps, prototypes, browser-based experiences, physical installations and more.<br><br>
                 I'm comfortable moving between concept development and hands-on execution (designing, coding and building). I care about how people experience my work, and I consider the audience in everything I do. <br><br>
             </p>
         </section>
@@ -68,10 +76,9 @@
 
         <!-- Project Grid -->
         <section class="projects">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" id="work-target">Projects</h2>
             
             <div class="project-thumb-holder">
-
                 <a class="project-thumb" href="projects/when-in-dome.html">
                     <div class="project-intro-image intro-image-when-in-dome">
                         <h3 class="project-title">When in Dome</h3>
@@ -83,7 +90,7 @@
                     </div>
                     <div class="project-thumb-text">
                         <div class="project-thumb-main-text">
-                            <div class="project-description">Geodesic dome filled with 4,378 LEDs that react to movement</div>
+                            <div class="project-description">Geodesic dome filled with LEDs that react to your movement.</div>
                         </div>
                     
 
@@ -103,7 +110,7 @@
                     </div>
                     <div class="project-thumb-text">
                         <div class="project-thumb-main-text">
-                            <div class="project-description">Interactive, multiplayer browser-based art, which pairs users.</div>
+                            <div class="project-description">Multiplayer art, a shared experience at a distance.</div>
                         </div>
                     </div>
                 </a>
@@ -118,21 +125,20 @@
                     </div>
                     <div class="project-thumb-text">
                         <div class="project-thumb-main-text">
-                            <div class="project-description">Generated text in my own coded handwriting.</div>
+                            <div class="project-description">Generated text in my handwriting, coded in JavaScript.</div>
                         </div>
                     </div>
                 </a>
-                <a class="project-thumb" href="projects/handwriting.html">
-                    <div class="project-intro-image intro-image-handwriting">
-                        <h3 class="project-title">Handwriting</h3>
+                <a class="project-thumb" href="projects/collaborative-control.html">
+                    <div class="project-intro-image intro-image-collaborative">
+                        <h3 class="project-title">Collaborative control</h3>
                         <div class="project-tags">
-                            <div class="project-tag">Javascript</div>
-                            <div class="project-tag">p5.js</div>
+                            <div class="project-tag">Prototyping</div>
                         </div>
                     </div>
                     <div class="project-thumb-text">
                         <div class="project-thumb-main-text">
-                            <div class="project-description">Generated text in my own coded handwriting.</div>
+                            <div class="project-description">Exploring prototypes for multi-user control of a system.</div>
                         </div>
                     </div>
                 </a>
@@ -143,26 +149,78 @@
     </div>
 
 
+    <div class="contact-form-container" id="contact-target">
+        <div class="contact-form-title">Get in touch!</div>
+        <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
+            <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
+            <div class="form-item">
+                <label for="name">Your name</label>
+                <input id="name" type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-item">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-item">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+            </div>
+            <div class="form-item">
+                <button type="submit" class="contact-submit">Send</button>
+            </div>
+        </form>
+    </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
-                    <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Message" rows="3" required></textarea>
-                    <button type="submit" class="contact-submit">Send</button>
-                </form>
-                <div class="footer-links">
-                    <a href="mailto:amy@amygoodchild.com">Email</a>
-                    <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
-                </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
+                <a href="https://amygoodchild.substack.com" target="_blank">Substack</a>
+                <a href="https://github.com/amygoodchild" target="_blank">Github</a>
             </div>
         </div>
     </footer>
 
     <!-- <script src="js/sketch.js"></script> -->
    <script src="nav-script.js"></script>
+
+
+   <!-- Forces page to scroll down durnig development-->
+   <!-- <script>
+    (function () {
+        var scrollYTarget = 2800;
+        function applyScroll() {
+            window.scrollTo(0, scrollYTarget);
+        }
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.addEventListener('load', applyScroll);
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) applyScroll();
+        });
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(applyScroll);
+        }
+
+        /* Live CSS/HTML reload often skips the load event; head stylesheet mutations mean a refresh happened */
+        var isLocalDev = location.protocol === 'file:' ||
+            /^localhost$|^127\.0\.0\.1$/i.test(location.hostname || '');
+        if (isLocalDev && document.head) {
+            var debounce;
+            function onStylesheetEnvChange() {
+                clearTimeout(debounce);
+                debounce = setTimeout(applyScroll, 80);
+            }
+            new MutationObserver(onStylesheetEnvChange).observe(document.head, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['href', 'media'],
+            });
+        }
+    })();
+</script> -->
 </body>
 </html>

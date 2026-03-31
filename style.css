@@ -1,6 +1,6 @@
-/* ===================================
-   CSS RESET & BASE STYLES
-   =================================== */
+/* 
+   CSS STYLES
+*/
 
 * {
     margin: 0;
@@ -9,10 +9,12 @@
 }
 
 :root {
-    /* Color Variables - Change these to customize your palette */
+    /* Color Variables */
     --color-bg: #fcfcfc;
     --color-bg-dark: #141414;
     --color-bg-less-dark: #363636;
+    --color-bg-toned-dark: #19141d;
+    --color-bg-toned-mid: #2b272f;
     --color-bg-secondary: #d3d3d3;
     --color-bg-tertiary: #d6e9e9;
     --color-text: #0d0d0d;
@@ -20,6 +22,7 @@
     --color-accent: #333333;
     --color-highlight-1: #4a2c5c;
     --color-highlight-2: #cd69ad;
+    --color-highlight-3: #734393;
     --color-text-link: #cfe1e8;
     --color-subtle-highlight: #6d365c;
     --color-border: #d3d3d3;
@@ -51,6 +54,7 @@
 html {
     font-size: 16px;
     scrollbar-gutter: stable;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -63,9 +67,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===================================
+/* 
    TYPOGRAPHY
-   =================================== */
+*/
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
@@ -102,9 +106,9 @@ a {
 
 
 
-/* ===================================
+/* 
    LAYOUT UTILITIES
-   =================================== */
+*/
 
 .main-content-wrapper{
     display: flex;
@@ -135,9 +139,9 @@ a {
 }
 
 
-/* ===================================
+/* 
    NAVIGATION
-   =================================== */
+*/
 
 .main-nav {
     position: sticky;
@@ -147,8 +151,8 @@ a {
     justify-content: flex-end;
     align-items: center;
     gap: var(--spacing-md);
-    padding: 0 10px;
-    height: 60px;
+    padding: 5px;
+
     width: 100%;
 }
 
@@ -171,11 +175,7 @@ a {
     background-repeat: no-repeat;
 }
 
-.main-nav.nav-collapsed {
-    justify-content: flex-end;
-    padding: 10px;
-    align-items: flex-start;
-}
+
 
 .nav-hamburger {
     display: flex;
@@ -194,6 +194,12 @@ a {
     flex-shrink: 0;
 }
 
+.main-nav.nav-collapsed {
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: flex-start;
+}
+
 .main-nav.nav-collapsed .nav-hamburger {
     opacity: 1;
     width: 40px;
@@ -205,7 +211,6 @@ a {
     margin: 0px;
     position: relative;
     z-index: 101;
-    
 }
 
 .nav-hamburger span {
@@ -291,9 +296,9 @@ a {
 }
 
 
-/* ===================================
+/* 
    HEADER / HERO SECTION
-   =================================== */
+*/
 
 .hero-content {    
     background-image: url(hero.jpg);
@@ -320,28 +325,68 @@ a {
     z-index: 100;
     top: 10px;
     left: 10px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 800;
     font-family: var(--font-serif);
     text-align: left;
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
-    line-height: 1;
+    padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .hero-title{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     font-family: var(--font-serif);
-    margin-top: var(--spacing-md);
     background-color: var(--color-bg-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    width: fit-content;
+}
+
+.hero-tagline-wrap {
+    max-width: 600px;
+    text-align: center;
 }
 
 .hero-tagline {
+    display: inline;
     font-size: 2rem;
     font-family: var(--font-serif);
     font-weight: 400;
-    background-color: var(--color-subtle-highlight);
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.hero-button {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: var(--font-serif);
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-xs) calc(var(--spacing-sm) - 0.12rem) var(--spacing-xs) var(--spacing-sm);
+    width: fit-content;
+    margin-top: var(--spacing-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-button-arrow {
+    flex-shrink: 0;
+}
+
+.hero-button:hover {
+    background-color: var(--color-bg-toned-mid);
+}
+
+
+.hero-jobtitles .hero-tagline {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
 }
 
 .hero-jobtitles {
@@ -376,6 +421,7 @@ a {
     font-size: 2rem;
     font-weight: 800;
     font-family: var(--font-serif);
+    scroll-margin-top: 100px;
 }
 
 .intro-text {
@@ -388,9 +434,9 @@ a {
     color: var(--color-text);
 }
 
-/* ===============================
+/* 
    PROJECTS SECTION
-   =================================== */
+*/
 
 .projects {
     width: 93%;
@@ -400,6 +446,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .section-title {
@@ -410,6 +457,11 @@ a {
     color: var(--color-text);
     width: 100%;
     margin-bottom: var(--spacing-lg);
+}
+
+#work-target {
+
+    scroll-margin-top: 100px;
 }
 
 .project-thumb-holder {
@@ -466,7 +518,7 @@ a {
 }
 
 .project-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 800;
     font-family: var(--font-serif);
     color: var(--color-text-secondary);
@@ -542,9 +594,9 @@ a {
     flex-shrink: 0;
 }
 
-/* ===================================
+/* 
    CASE STUDY PAGE
-   =================================== */
+ */
 
 .case-study-sticky-header {
     position: fixed;
@@ -597,6 +649,7 @@ a {
     align-self: start;
     margin-top: 100px;
     transition: font-size 0.4s ease;
+    padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 h4.case-study-content-title {
@@ -607,17 +660,19 @@ h4.case-study-content-title {
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 
 .case-study-hero-title.case-study-hero-title-stuck {
     position: fixed;
-    top: 10px;
+    top: 5px;
     left: 200px; /* After "Amy Goodchild" ~1.2rem + gap */
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     margin-top: 0;
     z-index: 99;
-    transition: font-size 0.6s ease;
+    transition: font-size 0.3s ease;
+    padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 
@@ -777,6 +832,14 @@ h4.case-study-content-title {
     width: 75%;
 }
 
+.three-wide-side-by-side{
+    gap: 10px;
+}
+
+.three-wide-side-by-side .media-content{
+    width: calc(30% - 15px); 
+}
+
 .one-wide .media-content{
     width: 100%;
 }
@@ -812,19 +875,20 @@ h4.case-study-content-title {
 }
 
 .case-study-tag {
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
     padding: 3px 10px;
+    border-radius: var(--border-radius);
 } 
 
 
-/* ===================================
+/* 
    OTHER PROJECTS SECTION (Case Study Pages)
-   =================================== */
+*/
 
 .other-projects-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 800;
     font-family: var(--font-serif);
     color: var(--color-text-secondary);
@@ -832,6 +896,7 @@ h4.case-study-content-title {
     text-align: center;
     width: fit-content;
     margin: 0 auto var(--spacing-md) auto;
+    padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .other-projects {
@@ -839,130 +904,170 @@ h4.case-study-content-title {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    margin-bottom: var(--spacing-xl);
 }
 
-.other-projects .other-project{
-    width: 300px;
-    height: 350px;
+.other-project {
+    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid var(--color-bg-dark);
     background-color: var(--color-bg-dark);
 }
 
-.other-project-image {
+.other-project-description{
     width: 100%;
-    height: 220px;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+}
+
+
+.other-project-image {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.4 / 1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.other-project-info {
-    padding: var(--spacing-md);
-}
-
 .other-project-title {
-    font-size: 1.2rem;
-    font-weight: 800;
+    font-size: .9rem;
+    font-weight: 600;
     font-family: var(--font-serif);
     color: var(--color-text-secondary);
-}
-
-.other-project-description {
-    font-size: 0.9rem;
-    font-weight: 200;
-    font-family: var(--font-sans);
-    color: var(--color-text-secondary);
-}
-
-/* ===================================
-   FOOTER
-   =================================== */
-
-.footer {
     background-color: var(--color-bg-dark);
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    width: fit-content;
+    position: relative;
 }
 
-.footer-content {
+
+
+
+
+
+
+
+/* 
+   CONTACT FORM
+*/
+
+
+.contact-form-container {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: var(--spacing-md);
-}
-
-.footer-links {
-    display: flex;
-    gap: var(--spacing-md);
-}
-
-.footer-links a {
-    font-size: 0.9375rem;
-    color: var(--color-highlight-2);
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer p {
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    margin: 0;
+    justify-content: center;
+    background-color: var(--color-bg-toned-dark);
+    padding: var(--spacing-lg) 0;
 }
 
 .contact-form {
     display: flex;
+    width: 500px;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: var(--spacing-sm);
-    max-width: 320px;
+    gap: var(--spacing-md);
+} 
+
+.contact-form-title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-serif);
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-form .form-item{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.contact-form label{
+    font-size: 1.0rem;
+    font-weight: 800;
+    font-family: var(--font-serif);
+    color: var(--color-text-secondary);
+    text-align: left;
 }
 
 .contact-form input,
-.contact-form textarea {
-    padding: 0.5rem 0.75rem;
-    font-family: var(--font-sans);
-    font-size: 0.9375rem;
-    font-weight: 200;
-    color: var(--color-text-secondary);
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--border-radius);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-.contact-submit {
-    width: fit-content;
-    padding: 0.5rem 1.25rem;
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
+.contact-form textarea{
+    width: 100%;
+    font: var(--font-sans);
+    font-size: 1.0rem;
     font-weight: 300;
     color: var(--color-text-secondary);
-    background-color: var(--color-highlight-2);
+    background-color: var(--color-bg-toned-mid);
+    text-align: left;
+    padding: var(--spacing-xs);
+    border: 1px solid var(--color-border);
+}
+
+.contact-form button{
+    width: 200px;
+    font: var(--font-sans);
+    font-size: 1.0rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    background-color: var(--color-highlight-3);
+    text-align: center;
+    padding: var(--spacing-xs);
     border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: opacity 0.2s ease;
 }
 
-.contact-submit:hover {
-    opacity: 0.9;
+/* 
+   FOOTER
+*/
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-lg) 0;
 }
 
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
+.footer-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-md);
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+}
+
+.footer-links a{
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+
+
+
+/* 
+   RESPONSIVE 
+*/
 
 @media (max-width: 1350px) {
 
@@ -1037,6 +1142,24 @@ h4.case-study-content-title {
         width: 98%;
     }
 
+    .section-full-width {
+        width: 100%;
+    }
+
+    .three-wide-side-by-side{
+        width: 100%;
+        gap: 20px;
+    }
+
+    h4.case-study-content-title{
+        font-size: 1.2rem;
+    }
+
+
+    .other-project-description{
+        font-size: 1.0rem;
+    }
+
    }
 
 
@@ -1053,13 +1176,15 @@ h4.case-study-content-title {
 
 
     .hero-title{
-        font-size: 1.8rem;
-        padding: var(--spacing-xs) 0;
+        font-size: 2.2rem;
     }
 
-    .tagline{
-        font-size: 1.2rem;
-        padding: var(--spacing-xs) 0;
+    .hero-tagline-wrap {
+        max-width: 500px;
+    }
+
+    .hero-tagline{
+        font-size: 1.6rem;
     }
 
 
@@ -1201,7 +1326,17 @@ h4.case-study-content-title {
     .two-wide .solo-img{
         width: 75%;
     }
-    
+
+    .three-wide-side-by-side{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .three-wide-side-by-side .media-content{
+        width: calc(100% - 15px); 
+        max-width: 500px;
+    }
+
     .one-wide .media-content{
         width: 100%;
     }
@@ -1213,8 +1348,28 @@ h4.case-study-content-title {
     .media-content .caption{
         font-size: .9rem;
     }
-    
-    
+
+    .other-projects{
+        width: 100%;
+        padding: 0 var(--spacing-sm);
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .other-project{
+        width: calc(50% - 15px);
+    }
+
+    .other-project-title{
+        font-size: .8rem;
+        padding: 3px var(--spacing-xs);
+    }
+
+    .other-project-description{
+        font-size: 1.2rem;
+    }
+
 
 }
 
@@ -1223,7 +1378,21 @@ h4.case-study-content-title {
 
 @media (max-width: 600px) {
 
+    .hero-title{
+        font-size: 1.6rem;
+    }
 
+    .hero-tagline-wrap {
+        max-width: 400px;
+    }
+
+    .hero-tagline{
+        font-size: 1.2rem;
+    }
+
+    .hero-button{
+        font-size: 1.0rem;
+    }
 
 
     .intro-text{
@@ -1326,4 +1495,31 @@ h4.case-study-content-title {
         font-size: .9rem;
     }
 
+    .contact-form {
+        width: 90%;
+        min-width: 200px;
+    }
+    
+
+    .contact-form-title{
+        font-size: 1.5rem;
+    }
+
+    .contact-form label{
+        font-size: 1.0rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        font-size: 1.0rem;
+    }
+
+
+    .other-project{
+        width: calc(80%);
+    }
+
+    .other-project-title{
+        font-size: 1.0rem;
+    }
 }

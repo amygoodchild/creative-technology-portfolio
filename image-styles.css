@@ -14,7 +14,13 @@
     background-image: url('../projects/images/when-in-dome/when-in-dome-1.png');
 }
 
+.intro-image-collaborative {
+    background-image: url('../projects/images/collaborative/collaborative-thumb.png');
+}
 
+.hero-image-collaborative {
+    background-image: url('../projects/images/collaborative/collaborative-hero.png');
+}
 
 .intro-image-flock {
     background-image: url('../projects/images/flock/flock-hero.png');
