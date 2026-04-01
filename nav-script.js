@@ -1,28 +1,12 @@
-/* Nav: hamburger only below 768px; full links at wider widths */
+/* Nav: hamburger menu toggle */
 (function() {
     var nav = document.getElementById('main-nav');
     var hamburger = document.getElementById('nav-hamburger');
-    var mobileBreakpoint = 768;
-
-    function isMobileNav() {
-        return window.innerWidth <= mobileBreakpoint;
-    }
-
-    function updateNav() {
-        if (isMobileNav()) {
-            nav.classList.add('nav-collapsed');
-        } else {
-            nav.classList.remove('nav-collapsed');
-            nav.classList.remove('nav-open');
-            hamburger.setAttribute('aria-expanded', 'false');
-        }
-    }
+    if (!nav || !hamburger) return;
 
     hamburger.addEventListener('click', function() {
-        if (nav.classList.contains('nav-collapsed')) {
-            nav.classList.toggle('nav-open');
-            hamburger.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
-        }
+        nav.classList.toggle('nav-open');
+        hamburger.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
     });
 
     document.addEventListener('click', function(e) {
@@ -39,10 +23,7 @@
         });
     });
 
-    window.addEventListener('resize', updateNav);
-
     nav.classList.add('nav-transition-disable');
-    updateNav();
     requestAnimationFrame(function() {
         requestAnimationFrame(function() {
             nav.classList.remove('nav-transition-disable');
