@@ -1053,6 +1053,7 @@ h4.case-study-content-title {
     text-align: center;
     padding: var(--spacing-xs);
     border: none;
+    cursor: pointer;
 }
 
 /* 
