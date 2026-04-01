@@ -781,6 +781,16 @@ h4.case-study-content-title {
     text-align: left;
 }
 
+.case-study-intro-text p,
+.case-study-text p {
+    margin: 0 0 1.3em 0;
+}
+
+.case-study-intro-text p:last-child,
+.case-study-text p:last-child {
+    margin-bottom: 0;
+}
+
 .case-study-text {
     font-size: 1.3rem;
     font-weight: 200;
@@ -804,6 +814,23 @@ h4.case-study-content-title {
 
 .case-study-text a:hover{
     color: var(--color-highlight-2);    text-decoration: underline;
+}
+
+.case-study-text ul{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.case-study-text ul li{
+    margin-bottom: 40px;
+    /* no bullet points */
+    list-style-type: none;
+    border-left: 2px solid var(--color-bg-dark);
+    padding: 5px 20px;
+}
+
+.case-study-text ul li p{
+    margin-bottom: 10px;
 }
 
 
@@ -1326,6 +1353,8 @@ h4.case-study-content-title {
     .case-study-text{
         font-size: 1.2rem;
     }
+
+
 
 
     .section-main-width {

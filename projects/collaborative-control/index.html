@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
     <title>Collaborative control prototypes | Amy Goodchild</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../image-styles.css">
@@ -55,8 +56,8 @@
                     <div class="case-study-facts"><div class="large">123</div><div class="small">lorem</div></div>
                 </div> -->
                 <div class="case-study-intro-text">
-                    I became interested in the ways that multiple people can interact with a computer interface at once and prototyped a series of experiments to offer various modes for interaction, and to see how people felt while using them.<br><br>
-                    I used unusual interfaces like handheld objects and body tracking, and combined the inputs in varied ways, to explore how a group of people can engage with a cybernetic system together.
+                    <p>I became interested in the ways that multiple people can interact with a computer interface at once and prototyped a series of experiments to offer various modes for interaction, and to see how people felt while using them.</p>
+                    <p>I used unusual interfaces like handheld objects and body tracking, and combined the inputs in varied ways, to explore how a group of people can engage with a cybernetic system together.</p>
                 </div>
                 <div class="case-study-tags">
                     <div class="case-study-tag">prototyping</div>
@@ -72,12 +73,86 @@
             <section class="case-study-section section-wide-width">
                 <video class="case-study-visual" src="images/collaborative-control-compilation.mp4" autoplay controls loop muted playsinline></video>
             </section>
+            <section class="case-study-section section-full-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">Audience control with paddles</h4>
+                    <p>Inspired by an experiment at SigGraph in 1991, I gave an audience paddles with red on one side and yellow on the other and let them play adaptations of games like Pong, Flappy Bird and Chrome's T-Rex game, which I prototyped from scratch in Processing.</p>
+                    <p>A camera facing the audience picks up how many players are holding up the red side of their paddle and how many the yellow, to control up and down movement or trigger a jump within the game.</p>
+                    <p>I did some initial guerilla testing of a basic prototype with a small group of friends at a party, and then arranged for a larger group to take part during an evening of talks at Here East in Hackney.</p>
+                </div>
+
+                <div class="case-study-img-gallery three-wide-side-by-side">
+                    <div class="media-content">
+                        <img src="images/paddles-6.png" alt="alttext">
+                        <div class="caption">Prototype cardboard paddles for initital tests</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="images/paddles-5.png" alt="alttext">
+                        <div class="caption">Laser cut plywood paddles</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="images/paddles-7.png" alt="alttext">
+                        <div class="caption">Tech setup for experiments, with screen to display the games and camera pointing at audience</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-study-section section-wide-width">
+
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img src="images/paddles-3.png" alt="alttext">
+                        <div class="caption">Initial guerilla testing with friends</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="images/paddles-4.png" alt="alttext">
+                        <div class="caption">Chrome T-Rex clone</div>
+                    </div>
+                </div>
+                <div class="case-study-img-gallery two-wide">
+                    <div class="media-content">
+                        <img src="images/paddles-1.png" alt="alttext">
+                        <div class="caption">Audience playing games</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="images/paddles-2.png" alt="alttext">
+                        <div class="caption">Laughter after failing to jump the elephant over the mouse.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-study-section section-full-width">
+                <div class="case-study-text section-main-width">
+                    <p>I learned a lot from these paddle game prototypes, here are some insights:</p>
+                    <ul>
+                        <li>
+                            <p><b>Iteration during testing</b></p>
+                            <p>I could only test these interactions with groups of people present, so I coded some changes live to make the most of testing sessions. This worked well, especially when I let people know what I was doing and took some of their suggestions, keeping them engaged.</p>
+                        </li>
+                        <li>
+                            <p><b>Leaders, followers and the hive mind</b></p>
+                            <p>Some participants try to lead the group by shouting out instructions, while others stay quiet. For example, in the T-Rex game, paddles need to be flipped at the same time to trigger a jump, and shouts of “now! now!” could often be heard.</p>
+                            <p>In the Flappy Bird-like game, there is no point shouting out, because if <i>everyone</i> goes to red at once then the rocket will crash into the wall. I didn't explain this to the audience, but a focused hush came over the crowd as they played.</p>
+                            <p>They had tried around 8 rounds with no points at all and I was about to move on, thinking it must be too difficult. Then suddenly something clicked, they gained control and managed to travel past several planets, like they'd tuned into each other.</p>
+                        </li>
+                        <li>
+                            <p><b>Experience as a goal</b></p>
+                            <p>Lots of early feedback from participants was focused on changes I could make to enable them to achieve higher scores. This led to me creating less goal-focused interactions, to draw people away from competitiveness and more into the group experience.</p>
+                        </li>
+                        <li>
+                            <p><b>Group interaction for connection</b></p>
+                            <p>Audience members, even those who didn't know each other, started chatting and engaging, which was great to see. There is huge potential for multi-user games and interactions to facilitate connection.</p> 
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
 
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Weird bodies</h4>
-                    I used a Kinect camera to track two people at once, combining points from their bodies in various ways. <br><br>
-                    In some experiments I created a third figure in the centre of the frame, which was the average of the two people. In others, I connected random points from each person into one amorphous blob, or joined their arms into a double pendulum.
+                    <p>I used a Kinect camera to track two people at once, combining points from their bodies in various ways.</p>
+                    <p>In some experiments I created a third figure in the centre of the frame, which was the average of the two people. In others, I connected random points from each person into one amorphous blob, or joined their arms into a double pendulum.</p>
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
@@ -103,44 +178,12 @@
             </section>
 
 
-
-
-            <section class="case-study-section section-wide-width">
-                <div class="case-study-text section-main-width">
-                    <h4 class="case-study-content-title">Large group control</h4>
-                    Inspired by an experiment at SigGraph in 1991, I gave an audience paddles with red on one side and yellow on the other and let them play adaptations of games like Pong, Flappy Bird and Chrome's T-Rex game, which I prototyped from scratch in Processing. <br><br>
-                    A camera facing at the audience picks up how many players are holding up the red side of their paddle and how many the yellow, to control up and down movement or trigger a jump within the game.<br><br>
-                    I did some initial guerilla testing of a very basic prototype with a small group of friends at a party, and then arranged for a larger group to take part during an evening of talks at Here East in Hackney. 
-                </div>
-                <div class="case-study-img-gallery two-wide">
-                    <div class="media-content">
-                        <img src="images/paddles-1.png" alt="alttext">
-                        <div class="caption">Group playing games</div>
-                    </div>
-                    <div class="media-content">
-                        <img src="images/paddles-3.png" alt="alttext">
-                        <div class="caption">Initial guerilla testing</div>
-                    </div>
-                </div>
-
-                <div class="case-study-img-gallery two-wide">
-                    <div class="media-content">
-                        <img src="images/paddles-4.png" alt="alttext">
-                        <div class="caption">Chrome T-Rex clone</div>
-                    </div>
-                    <div class="media-content">
-                        <img src="images/paddles-2.png" alt="alttext">
-                        <div class="caption">Group playing games</div>
-                    </div>
-                </div>
-            </section>
-
-
             <section class="case-study-section section-main-width">
                 <div class="case-study-text">
-                    <h4 class="case-study-content-title">Remote connections</h4>
-                    I used websockets and Nodejs to connect events on two canvas elements on different machines. I coded the interactive visuals in p5js and when one user draws bubbles on their screen, they show up on the other screen almost instantaneously.<br><br>
-                    I prototyped this with two local laptops initially and later used this technology to create <i><b>Flock</b></i> (which you can read more about in this <a href="../flock">case study</a>)
+                    <h4 class="case-study-content-title">Remote connection proof of concept</h4>
+                    <p>I used websockets and Nodejs to connect events on two canvas elements on different machines.</p>
+                    <p>I coded the interactive visuals in p5js and, when one user draws bubbles on their screen, they show up on the other screen almost instantaneously.</p>
+                    <p>I prototyped this with two local laptops initially and later used this technology to create <i><b>Flock</b></i> (which you can read more about in this <a href="../flock">case study</a>)</p>
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -153,8 +196,8 @@
             <section class="case-study-section section-main-width">
                 <div class="case-study-text">
                     <h4 class="case-study-content-title">Everybody jump</h4>
-                    In this interaction, I hooked up the original Chrome T-Rex game to Kinect tracking and set it up so that the T-Rex only jumps if over half the participants are in the air at the same time. <br><br>
-                    This was fun but quite difficult, I think our best run was about 4-5 jumps in a row. 
+                    <p>In this interaction, I hooked up the original Chrome T-Rex game to Kinect tracking and set it up so that the T-Rex only jumps if over half the participants are in the air at the same time.</p>
+                    <p>This was fun but quite difficult, our best run was about 4-5 jumps in a row.</p>
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -169,7 +212,7 @@
             <section class="case-study-section section-full-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Floor projections</h4>
-                    I mounted a Kinect camera high up looking down, and used the depth camera to track people's movements within a small area. A projector pointing down at the same space displayed visuals I coded in Processing, which responded to people's positions.
+                    <p>I mounted a Kinect camera high up looking down, and used the depth camera to track people's movements within a small area. A projector pointing down at the same space displayed visuals I coded in Processing, which responded to people's positions.</p>
                 </div>
                 <div class="case-study-img-gallery three-wide-side-by-side">
                     <div class="media-content">
@@ -187,63 +230,69 @@
                 </div>
             </section>
 
-
-
-
-    <div class="other-projects-holder">
-        <div class="other-projects-title">More projects</div>
-        <div class="other-projects">
-            <a class="other-project border" href="../when-in-dome">
-                <div class="other-project-image intro-image-when-in-dome"><div class="other-project-title">When in Dome</div></div>
-                <div class="other-project-description">Geodesic dome filled with LEDs that react to your movement</div>
-            </a>
-            <a class="other-project border" href="../flock">
-                <div class="other-project-image hero-image-flock"><div class="other-project-title">Flock</div></div>
-                <div class="other-project-description">Multiplayer art, a shared experience at a distance.</div>
-            </a>
-
-            <a class="other-project border" href="../handwriting">
-                <div class="other-project-image intro-image-handwriting"><div class="other-project-title">Handwriting</div></div>
-                <div class="other-project-description">Generated text in my handwriting, coded in JavaScript.</div>
-            </a>
-        </div>
-    </div>
-
-
-
-    <div class="contact-footer-holder">
-        <div class="contact-form-container" id="contact">
-            <div class="contact-form-title">Get in touch!</div>
-            <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
-                <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
-                <div class="form-item">
-                    <label for="name">Your name</label>
-                    <input id="name" type="text" name="name" placeholder="Name" required>
+            <!-- Text and two images -->
+            <section class="case-study-section section-full-width">
+                <div class="case-study-text section-main-width">
+                    <h4 class="case-study-content-title">Finally</h4>
+                    <p>Much of what I learnt from these experiments went on to inform the creation of my immersive installation <a href="../when-in-dome">When in Dome</a> and the browser experience <a href="../flock">Flock</a>, both of which offer unusual ways for multiple people to interact.</p>
                 </div>
-                <div class="form-item">
-                    <label for="email">Your email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-item">
-                    <label for="message">Your message</label>
-                    <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
-                </div>
-                <div class="form-item">
-                    <button type="submit" class="contact-submit">Send</button>
-                </div>
-            </form>
-        </div>
+            </section>
+        </article>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
-                    <a href="https://amygoodchild.substack.com" target="_blank">Substack</a>
-                    <a href="https://github.com/amygoodchild" target="_blank">Github</a>
-                </div>
+        <div class="other-projects-holder">
+            <div class="other-projects-title">More projects</div>
+            <div class="other-projects">
+                <a class="other-project border" href="../when-in-dome">
+                    <div class="other-project-image intro-image-when-in-dome"><div class="other-project-title">When in Dome</div></div>
+                    <div class="other-project-description">Geodesic dome filled with LEDs that react to your movement</div>
+                </a>
+                <a class="other-project border" href="../flock">
+                    <div class="other-project-image hero-image-flock"><div class="other-project-title">Flock</div></div>
+                    <div class="other-project-description">Multiplayer art, a shared experience at a distance.</div>
+                </a>
+
+                <a class="other-project border" href="../handwriting">
+                    <div class="other-project-image intro-image-handwriting"><div class="other-project-title">Handwriting</div></div>
+                    <div class="other-project-description">Generated text in my handwriting, coded in JavaScript.</div>
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+
+
+
+        <div class="contact-footer-holder">
+            <div class="contact-form-container" id="contact">
+                <div class="contact-form-title">Get in touch!</div>
+                <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
+                    <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
+                    <div class="form-item">
+                        <label for="name">Your name</label>
+                        <input id="name" type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="contact-submit">Send</button>
+                    </div>
+                </form>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
+                        <a href="https://amygoodchild.substack.com" target="_blank">Substack</a>
+                        <a href="https://github.com/amygoodchild" target="_blank">Github</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
     </main>
 

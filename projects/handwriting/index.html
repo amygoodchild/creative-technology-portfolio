@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
     <title>Handwriting | Amy Goodchild</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../image-styles.css">
@@ -47,8 +48,8 @@
         <article class="case-study-content">
             <section class="case-study-section section-main-width">
                 <div class="case-study-intro-text">
-                    I built a handwriting engine in JavaScript that converts text into controllable paths and have used it in multiple physical and web-based works. <br><br>
-                    I've integrated this with procedural text generation, exploring the gap between meaning and nonsense, in a space conceptually and technically adjacent to LLMs. 
+                    <p>I built a handwriting engine in JavaScript that converts text into controllable paths and have used it in multiple physical and web-based works.</p>
+                    <p>I've integrated this with procedural text generation, exploring the gap between meaning and nonsense, in a space conceptually and technically adjacent to LLMs.</p>
                 </div>
                 <div class="case-study-tags">
                     <div class="case-study-tag">JavaScript</div>
@@ -67,9 +68,8 @@
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Defining the letters</h4>
-                    Each letter is defined by a small number of points, which means the file size for the handwriting code is relatively small and defining new characters is quick. <br><br>
-                    
-                    The points are curved into smooth paths using Chaikin's curve algorithm and then turned into a shape, so they can have varied width. 
+                    <p>Each letter is defined by a small number of points, which means the file size for the handwriting code is relatively small and defining new characters is quick.</p>
+                    <p>The points are curved into smooth paths using Chaikin's curve algorithm and then turned into a shape, so they can have varied width.</p>
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
@@ -85,7 +85,7 @@
 
             <section class="case-study-section section-main-width">
                 <div class="case-study-text section-main-width">
-                    I created a tool to define letters quickly, by clicking out paths and exporting point positions as an array. 
+                    <p>I created a tool to define letters quickly, by clicking out paths and exporting point positions as an array.</p>
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -109,8 +109,8 @@
             <section class="case-study-section section-main-width">
                 <div class="case-study-text">
                     <h4 class="case-study-content-title">Ligature logic</h4>
-                    Some pairs of letters can be easily joined, simply by connecting the last point of one letter to the first point of the next, while others do not automatically work nicely.<br><br>
-                    Here are two examples of problematic letter pairs, creating a path through the centre of the "a" and a bump between the "t" and "i".
+                    <p>Some pairs of letters can be easily joined, simply by connecting the last point of one letter to the first point of the next, while others do not automatically work nicely.</p>
+                    <p>Here are two examples of problematic letter pairs, creating a path through the centre of the "a" and a bump between the "t" and "i".</p>
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
@@ -128,7 +128,7 @@
             <!-- Text and one image -->
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
-                    I assigned each letter one of four join types for the beginning and end of the path - no join, baseline, just above baseline and x-height. Then, where necessary, I gave each letter rules for how it should join to the other join types. 
+                    <p>I assigned each letter one of four join types for the beginning and end of the path - no join, baseline, just above baseline and x-height. Then, where necessary, I gave each letter rules for how it should join to the other join types.</p>
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -151,7 +151,7 @@
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Meaningful nonsense</h4>
-                    The text content is generated using a grammar-based sentence structure system, which makes use of modular components, curated word lists and randomness to produce coherent but ambiguous phrases. 
+                    <p>The text content is generated using a grammar-based sentence structure system, which makes use of modular components, curated word lists and randomness to produce coherent but ambiguous phrases.</p>
                 </div>
                 <div class="case-study-img-gallery one-wide">
                     <div class="media-content">
@@ -167,8 +167,7 @@
             <section class="case-study-section section-wide-width">
                 <div class="case-study-text section-main-width">
                     <h4 class="case-study-content-title">Messages and artworks</h4>
-                    This handwriting system continues to show up in my artwork. 
-                    
+                    <p>This handwriting system continues to show up in my artwork.</p>
                 </div>
                 <div class="case-study-img-gallery two-wide">
                     <div class="media-content">
@@ -201,60 +200,61 @@
                     </div>
                 </div>
             </section>
+        </article>
 
-    <div class="other-projects-holder">
-        <div class="other-projects-title">More projects</div>
-        <div class="other-projects">
-            <a class="other-project border" href="../when-in-dome">
-                <div class="other-project-image intro-image-when-in-dome"><div class="other-project-title">When in Dome</div></div>
-                <div class="other-project-description">Geodesic dome filled with LEDs that react to your movement</div>
-            </a>
-            <a class="other-project border" href="../flock">
-                <div class="other-project-image hero-image-flock"><div class="other-project-title">Flock</div></div>
-                <div class="other-project-description">Multiplayer art, a shared experience at a distance.</div>
-            </a>
+        <div class="other-projects-holder">
+            <div class="other-projects-title">More projects</div>
+            <div class="other-projects">
+                <a class="other-project border" href="../when-in-dome">
+                    <div class="other-project-image intro-image-when-in-dome"><div class="other-project-title">When in Dome</div></div>
+                    <div class="other-project-description">Geodesic dome filled with LEDs that react to your movement</div>
+                </a>
+                <a class="other-project border" href="../flock">
+                    <div class="other-project-image hero-image-flock"><div class="other-project-title">Flock</div></div>
+                    <div class="other-project-description">Multiplayer art, a shared experience at a distance.</div>
+                </a>
 
-            <a class="other-project border" href="../collaborative-control">
-                <div class="other-project-image intro-image-collaborative"><div class="other-project-title">Collaborative control</div></div>
-                <div class="other-project-description">Exploring prototypes for multi-user control of a system.</div>
-            </a>
-        </div>
-    </div>
-
-
-    <div class="contact-footer-holder">
-        <div class="contact-form-container" id="contact">
-            <div class="contact-form-title">Get in touch!</div>
-            <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
-                <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
-                <div class="form-item">
-                    <label for="name">Your name</label>
-                    <input id="name" type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-item">
-                    <label for="email">Your email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-item">
-                    <label for="message">Your message</label>
-                    <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
-                </div>
-                <div class="form-item">
-                    <button type="submit" class="contact-submit">Send</button>
-                </div>
-            </form>
-        </div>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
-                    <a href="https://amygoodchild.substack.com" target="_blank">Substack</a>
-                    <a href="https://github.com/amygoodchild" target="_blank">Github</a>
-                </div>
+                <a class="other-project border" href="../collaborative-control">
+                    <div class="other-project-image intro-image-collaborative"><div class="other-project-title">Collaborative control</div></div>
+                    <div class="other-project-description">Exploring prototypes for multi-user control of a system.</div>
+                </a>
             </div>
-        </footer>
-    </div>
+        </div>
+
+
+        <div class="contact-footer-holder">
+            <div class="contact-form-container" id="contact">
+                <div class="contact-form-title">Get in touch!</div>
+                <form class="contact-form" action="https://formsubmit.co/877b141b9d50758469f9c64358b78f28" method="POST">
+                    <input type="hidden" name="_subject" value="Contact form submission - Amy Goodchild">
+                    <div class="form-item">
+                        <label for="name">Your name</label>
+                        <input id="name" type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="contact-submit">Send</button>
+                    </div>
+                </form>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="https://instagram.com/amy_goodchild" target="_blank">Instagram</a>
+                        <a href="https://amygoodchild.substack.com" target="_blank">Substack</a>
+                        <a href="https://github.com/amygoodchild" target="_blank">Github</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
     </main>
 
