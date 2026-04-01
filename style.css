@@ -152,17 +152,16 @@ a {
     align-items: center;
     gap: var(--spacing-md);
     padding: 5px;
-
     width: 100%;
 }
 
 .secondary-nav {
     position: fixed;
-    top: 60px;
-    right: 10px;
+    top: 55px;
+    right: 5px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: 5px;
     z-index: 100;
 }
 
@@ -195,53 +194,7 @@ a {
     flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-    .nav-hamburger {
-        display: flex;
-    }
 
-    .main-nav {
-        justify-content: flex-end;
-        padding: 10px;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 280px;
-        height: 100vh;
-        flex-direction: column;
-        background-color: var(--color-bg-dark);
-        padding: 80px var(--spacing-md);
-        gap: 0;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        justify-content: flex-start;
-        align-items: stretch;
-    }
-
-    .nav-transition-disable .nav-links {
-        transition: none;
-    }
-
-    .main-nav.nav-open .nav-links {
-        transform: translateX(0);
-    }
-
-    .nav-links a {
-        padding: var(--spacing-sm) 0;
-        text-shadow: none;
-        color: var(--color-text-secondary);
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    .nav-links a:last-child {
-        border-bottom: none;
-    }
-}
 
 .nav-hamburger span {
     display: block;
@@ -596,7 +549,7 @@ a {
 .case-study-sticky-header {
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 5px;
     z-index: 100;
 }
 
@@ -1323,8 +1276,29 @@ h4.case-study-content-title {
     .project-thumb{
         width: 100%;
     }
-    
 
+    .case-study-hero {
+        padding-left: 30px;
+    }
+    
+    .case-study-hero-title {
+        font-size: 1.6rem;
+        align-self: flex-start;
+        margin-left: 20px;
+    }
+
+    .case-study-hero-title.case-study-hero-title-stuck {
+        font-size: .8rem;
+        font-weight: 400;
+        position: fixed;
+        top: 45px;
+        left: 5px;
+        margin-left: 0;
+    }
+
+    .case-study-content-title-stuck{
+        font-size: 1rem;
+    }
 
 
     .case-study-facts .large{
@@ -1432,6 +1406,51 @@ h4.case-study-content-title {
         font-size: 1.2rem;
     }
 
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        flex-direction: column;
+        background-color: var(--color-bg-dark);
+        padding: 80px var(--spacing-md);
+        gap: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .nav-transition-disable .nav-links {
+        transition: none;
+    }
+
+    .main-nav.nav-open .nav-links {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        padding: var(--spacing-sm) 0;
+        text-shadow: none;
+        color: var(--color-text-secondary);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
 
 }
 
@@ -1477,24 +1496,7 @@ h4.case-study-content-title {
         justify-content: center;
     }
 
-    .case-study-hero-title {
-        font-size: 1.4rem;
-        align-self: left;
-        margin-left: 20px;
-    }
-
-    .case-study-hero-title.case-study-hero-title-stuck {
-        font-size: .8rem;
-        font-weight: 400;
-        position: fixed;
-        top: 45px;
-        left: 10px;
-        margin-left: 0;
-    }
-
-    .case-study-content-title-stuck{
-        font-size: 1rem;
-    }
+    
 
     .case-study-columns {
         align-items: center;
