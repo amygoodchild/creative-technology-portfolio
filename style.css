@@ -341,6 +341,7 @@ a {
     background-color: var(--color-bg-dark);
     padding: var(--spacing-xs) var(--spacing-sm);
     width: fit-content;
+    line-height: 1.2;
 }
 
 .hero-tagline-wrap {
