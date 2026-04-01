@@ -469,8 +469,8 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    gap: 40px 20px;
-    justify-content: space-between;
+    gap: 40px 30px;
+    justify-content: flex-start;
     width: 100%;
     max-width: 1500px;
 }
@@ -538,7 +538,7 @@ a {
 }
 
 .project-description {
-    font-size: 2.3rem;
+    font-size: 2.0rem;
     font-weight: 100;
     line-height: 1.5;
     margin-bottom: var(--spacing-xs);
@@ -688,6 +688,7 @@ h4.case-study-content-title {
 
 
 
+
 .case-study-section {
     width: 100%;
     display: flex;
@@ -761,8 +762,13 @@ h4.case-study-content-title {
     border-radius: var(--border-radius);
 }
 
+.case-study-visual-70{
+    max-height: 630px;
+    max-width: 630px;
+}
+
 .case-study-visual-50{
-    max-height: 500px;
+    max-height: 570px;
     max-width: 500px;
 }
 
@@ -833,11 +839,11 @@ h4.case-study-content-title {
 }
 
 .three-wide-side-by-side{
-    gap: 10px;
+    gap: 40px;
 }
 
 .three-wide-side-by-side .media-content{
-    width: calc(30% - 15px); 
+    width: calc(33% - 30px); 
 }
 
 .one-wide .media-content{
@@ -867,6 +873,11 @@ h4.case-study-content-title {
     color: var(--color-text);
 }
 
+.media-content .caption a{
+    font-weight: 300;
+    text-decoration: underline;
+}
+
 
 .case-study-tags {
     display: flex;
@@ -887,6 +898,12 @@ h4.case-study-content-title {
    OTHER PROJECTS SECTION (Case Study Pages)
 */
 
+.other-projects-holder {
+    width: 100%;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+}
+
 .other-projects-title {
     font-size: 1.2rem;
     font-weight: 800;
@@ -905,7 +922,7 @@ h4.case-study-content-title {
     gap: 20px;
     justify-content: center;
     align-items: stretch;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xs);
 }
 
 .other-project {
@@ -957,6 +974,14 @@ h4.case-study-content-title {
 
 
 
+
+/* 
+   CONTACT & FOOTER HOLDER
+*/
+
+.contact-footer-holder {
+    width: 100%;
+}
 
 /* 
    CONTACT FORM
@@ -1153,6 +1178,10 @@ h4.case-study-content-title {
 
     h4.case-study-content-title{
         font-size: 1.2rem;
+    }
+
+    .other-projects-holder{
+        width: 100%;
     }
 
 
