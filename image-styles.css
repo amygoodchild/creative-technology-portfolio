@@ -7,42 +7,42 @@
 }
 
 .intro-image-when-in-dome {
-    background-image: url('../projects/images/when-in-dome/when-in-dome-intro.jpg');
+    background-image: url('../projects/when-in-dome/images/when-in-dome-intro.jpg');
 }
 
 .hero-image-when-in-dome {
-    background-image: url('../projects/images/when-in-dome/when-in-dome-1.png');
+    background-image: url('../projects/when-in-dome/images/when-in-dome-1.png');
 }
 
 .intro-image-collaborative {
-    background-image: url('../projects/images/collaborative/collaborative-thumb.png');
+    background-image: url('../projects/collaborative-control/images/collaborative-thumb.png');
 }
 
 .hero-image-collaborative {
-    background-image: url('../projects/images/collaborative/collaborative-hero.png');
+    background-image: url('../projects/collaborative-control/images/collaborative-hero.png');
 }
 
 .intro-image-flock {
-    background-image: url('../projects/images/flock/flock-hero.png');
+    background-image: url('../projects/flock/images/flock-hero.png');
 }
 
 .hero-image-flock{
-    background-image: url('../projects/images/flock/flock-hero.png');
+    background-image: url('../projects/flock/images/flock-hero.png');
 }
 
 .intro-image-handwriting {
-    background-image: url('../projects/images/handwriting/handwriting-thumb-3.png');
+    background-image: url('../projects/handwriting/images/handwriting-thumb-3.png');
 }
 
 .hero-image-handwriting{
-    background-image: url('../projects/images/handwriting/handwriting-hero-3.png');
+    background-image: url('../projects/handwriting/images/handwriting-hero-3.png');
 }
 
 
 .hero-image-art{
-    background-image: url('../projects/images/algorithmic-art/art-hero.png');
+    background-image: url('../projects/algorithmic-art/images/art-hero.png');
 }
 
 .intro-image-art{
-    background-image: url('../projects/images/algorithmic-art/art-thumb.png');
+    background-image: url('../projects/algorithmic-art/images/art-thumb.png');
 }
