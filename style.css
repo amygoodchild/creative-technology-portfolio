@@ -1173,6 +1173,14 @@ h4.case-study-content-title {
         width: 100%;
     }
 
+    .two-wide{
+        gap: 30px;
+    }
+
+    .two-wide .media-content{
+        width: calc(60%);
+    }
+
     .three-wide-side-by-side{
         width: 100%;
         gap: 20px;
