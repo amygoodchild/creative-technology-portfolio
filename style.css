@@ -668,10 +668,12 @@ h4.case-study-content-title {
 
 .section-wide-width {
     width: 80%;
+    max-width: 1300px;
 }
 
 .section-full-width {
     width: 98%;
+    max-width: 1500px;
 }
 
 .text-flow-section {
