@@ -735,6 +735,10 @@ h4.case-study-content-title {
     margin: 0 0 1.3em 0;
 }
 
+.case-study-text p b{
+    font-weight: 500;
+}
+
 .case-study-intro-text p:last-child,
 .case-study-text p:last-child {
     margin-bottom: 0;
@@ -776,6 +780,25 @@ h4.case-study-content-title {
     list-style-type: none;
     border-left: 2px solid var(--color-bg-dark);
     padding: 5px 20px;
+}
+
+.case-study-text ul.golf{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.case-study-text ul.golf li{
+    list-style-type: none;
+    margin-bottom: 0;
+    border-left: none;
+    padding: 5px 10px;
+    background-color: #71657d;
+    width: fit-content;
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
 }
 
 .case-study-text ul li p{
@@ -1597,5 +1620,18 @@ h4.case-study-content-title {
 
     .other-project-title{
         font-size: 1.0rem;
+    }
+
+    .case-study-text ul.golf li{
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        list-style-type: none;
+        border-left: none;
+        padding: 5px 10px;
+        background-color: #71657d;
+        width: fit-content;
+        color: var(--color-text-secondary);
+        font-size: 1.2rem;
     }
 }

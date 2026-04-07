@@ -46,3 +46,12 @@
 .intro-image-art{
     background-image: url('../projects/algorithmic-art/images/art-thumb.png');
 }
+
+
+.hero-image-usga{
+    background-image: url('../projects/usga/images/usga-hero.png');
+}
+
+.intro-image-usga{
+    background-image: url('../projects/usga/images/usga-thumb.png');
+}
