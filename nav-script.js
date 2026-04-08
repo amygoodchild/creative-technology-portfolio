@@ -57,3 +57,37 @@
     checkTitleStick();
 })();
 
+
+/* Scroll depth tracking for project pages (GA4) */
+(function() {
+    if (!document.querySelector('.case-study-content')) return;
+    if (typeof gtag === 'undefined') return;
+
+    var thresholds = [25, 50, 75, 100];
+    var fired = {};
+    var pageStart = Date.now();
+    var lastFiredTime = pageStart;
+
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+        var percent = Math.round((scrollTop / docHeight) * 100);
+
+        for (var i = 0; i < thresholds.length; i++) {
+            var t = thresholds[i];
+            if (percent >= t && !fired[t]) {
+                fired[t] = true;
+                var now = Date.now();
+                gtag('event', 'scroll_depth', {
+                    percent_scrolled: t,
+                    page_title: document.title,
+                    seconds_on_page: Math.round((now - pageStart) / 1000),
+                    seconds_since_last: Math.round((now - lastFiredTime) / 1000)
+                });
+                lastFiredTime = now;
+            }
+        }
+    }, { passive: true });
+})();
+
