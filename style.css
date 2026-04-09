@@ -292,7 +292,7 @@ a {
 }
 
 .hero-tagline-wrap {
-    max-width: 600px;
+    max-width: 650px;
     text-align: center;
 }
 
@@ -465,6 +465,61 @@ a {
     background-repeat: no-repeat;
 }
 
+/* Project card thumbnails: zoom + lighten on hover (::before keeps titles sharp) */
+.project-thumb > .project-intro-image,
+.other-project > .other-project-image {
+    position: relative;
+    overflow: hidden;
+    background-image: none;
+}
+
+.project-thumb > .project-intro-image::before,
+.other-project > .other-project-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: var(--intro-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transform-origin: center center;
+    filter: brightness(1);
+    transition:
+        transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+        filter 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.project-thumb:hover > .project-intro-image::before,
+.project-thumb:focus-visible > .project-intro-image::before,
+.other-project:hover > .other-project-image::before,
+.other-project:focus-visible > .other-project-image::before {
+    transform: scale(1.04);
+    filter: brightness(1.19);
+}
+
+.project-thumb > .project-intro-image > *,
+.other-project > .other-project-image > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-thumb > .project-intro-image::before,
+    .other-project > .other-project-image::before {
+        transition: none;
+    }
+
+    .project-thumb:hover > .project-intro-image::before,
+    .project-thumb:focus-visible > .project-intro-image::before,
+    .other-project:hover > .other-project-image::before,
+    .other-project:focus-visible > .other-project-image::before {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
 .project-title {
     font-size: 1.1rem;
     font-weight: 800;
@@ -603,14 +658,16 @@ a {
 h4.case-study-content-title {
     font-size: 1.4rem;
     font-weight: 800;
-    width: fit-content;
     font-family: var(--font-serif);
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-sm);
     padding: var(--spacing-xs) var(--spacing-sm);
+    display: inline;
+    max-width: 100%;
+    line-height: 1.35;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
-
 
 .case-study-hero-title.case-study-hero-title-stuck {
     position: fixed;
@@ -633,9 +690,6 @@ h4.case-study-content-title {
     justify-content: center;
     gap: var(--spacing-xl);
 }
-
-
-
 
 .case-study-section {
     width: 100%;
@@ -752,12 +806,8 @@ h4.case-study-content-title {
     text-align: left;
 }
 
-.case-study-content-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    font-family: var(--font-serif);
-    background-color: var(--color-bg-dark);
-    color: var(--color-text-secondary);
+.case-study-text h4.case-study-content-title + p {
+    margin-top: var(--spacing-sm);
 }
 
 .case-study-text a{
@@ -766,7 +816,8 @@ h4.case-study-content-title {
 }
 
 .case-study-text a:hover{
-    color: var(--color-highlight-2);    text-decoration: underline;
+    color: var(--color-highlight-2);
+    text-decoration: underline;
 }
 
 .case-study-text ul{
@@ -1220,7 +1271,7 @@ h4.case-study-content-title {
     }
 
     .hero-tagline-wrap {
-        max-width: 500px;
+        max-width: 600px;
     }
 
     .hero-tagline{
@@ -1322,11 +1373,6 @@ h4.case-study-content-title {
         left: 5px;
         margin-left: 0;
     }
-
-    .case-study-content-title-stuck{
-        font-size: 1rem;
-    }
-
 
     .case-study-facts .large{
         font-size: 1.5rem;
@@ -1540,10 +1586,6 @@ h4.case-study-content-title {
         font-size: 1.1rem;
     }
 
-    h4.case-study-content-title{
-        font-size: 1.2rem;
-    }
-
     .section-main-width {
         width: 90%;
     }
@@ -1555,8 +1597,6 @@ h4.case-study-content-title {
     .section-full-width {
         width: 90%;
     }
-
-    
 
     .section-wide-width .section-main-width {
         width: 100%;

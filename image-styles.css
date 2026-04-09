@@ -7,51 +7,63 @@
 }
 
 .intro-image-when-in-dome {
-    background-image: url('../projects/when-in-dome/images/when-in-dome-intro.jpg');
+    --intro-bg: url('../projects/when-in-dome/images/when-in-dome-intro.jpg');
+    background-image: var(--intro-bg);
 }
 
 .hero-image-when-in-dome {
-    background-image: url('../projects/when-in-dome/images/when-in-dome-1.png');
+    --intro-bg: url('../projects/when-in-dome/images/when-in-dome-1.png');
+    background-image: var(--intro-bg);
 }
 
 .intro-image-collaborative {
-    background-image: url('../projects/collaborative-control/images/collaborative-thumb.png');
+    --intro-bg: url('../projects/collaborative-control/images/collaborative-thumb.png');
+    background-image: var(--intro-bg);
 }
 
 .hero-image-collaborative {
-    background-image: url('../projects/collaborative-control/images/collaborative-hero.png');
+    --intro-bg: url('../projects/collaborative-control/images/collaborative-hero.png');
+    background-image: var(--intro-bg);
 }
 
 .intro-image-flock {
-    background-image: url('../projects/flock/images/flock-hero.png');
+    --intro-bg: url('../projects/flock/images/flock-hero.png');
+    background-image: var(--intro-bg);
 }
 
 .hero-image-flock{
-    background-image: url('../projects/flock/images/flock-hero.png');
+    --intro-bg: url('../projects/flock/images/flock-hero.png');
+    background-image: var(--intro-bg);
 }
 
 .intro-image-handwriting {
-    background-image: url('../projects/handwriting/images/handwriting-thumb-3.png');
+    --intro-bg: url('../projects/handwriting/images/handwriting-thumb-3.png');
+    background-image: var(--intro-bg);
 }
 
 .hero-image-handwriting{
-    background-image: url('../projects/handwriting/images/handwriting-hero-3.png');
+    --intro-bg: url('../projects/handwriting/images/handwriting-hero-3.png');
+    background-image: var(--intro-bg);
 }
 
 
 .hero-image-art{
-    background-image: url('../projects/algorithmic-art/images/art-hero.png');
+    --intro-bg: url('../projects/algorithmic-art/images/art-hero.png');
+    background-image: var(--intro-bg);
 }
 
 .intro-image-art{
-    background-image: url('../projects/algorithmic-art/images/art-thumb.png');
+    --intro-bg: url('../projects/algorithmic-art/images/art-thumb.png');
+    background-image: var(--intro-bg);
 }
 
 
 .hero-image-usga{
-    background-image: url('../projects/usga/images/usga-hero.png');
+    --intro-bg: url('../projects/usga/images/usga-hero.png');
+    background-image: var(--intro-bg);
 }
 
 .intro-image-usga{
-    background-image: url('../projects/usga/images/usga-intro.png');
+    --intro-bg: url('../projects/usga/images/usga-intro.png');
+    background-image: var(--intro-bg);
 }
