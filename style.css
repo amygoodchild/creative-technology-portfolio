@@ -1130,6 +1130,8 @@ h4.case-study-content-title {
     gap: var(--spacing-md);
 }
 
+
+
 .footer-links{
     display: flex;
     flex-direction: row;
