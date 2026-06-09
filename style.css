@@ -23,6 +23,7 @@
     --color-highlight-1: #4a2c5c;
     --color-highlight-2: #cd69ad;
     --color-highlight-3: #734393;
+    --color-highlight-4: #2c2530;
     --color-text-link: #cfe1e8;
     --color-subtle-highlight: #6d365c;
     --color-border: #d3d3d3;
@@ -417,7 +418,7 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    gap: 40px 30px;
+    gap: 40px 25px;
     justify-content: flex-start;
     width: 100%;
     max-width: 1500px;
@@ -438,7 +439,7 @@ a {
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     padding: var(--spacing-md);
     background-color: var(--color-bg-dark);
     color: var(--color-text-secondary);
@@ -549,23 +550,24 @@ a {
 
 
 .project-tags {
-    display: none;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
-
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .project-tag {
-    font-family: var(--font-serif);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    font-weight: 200;
     padding: 3px 10px;
-    background-color: var(--color-bg-less-dark);
+    background-color: var(--color-highlight-4);
     color: var(--color-text-secondary);
+    border-left: 2px solid var(--color-highlight-1);
 }
-
 
 .project-button {
     display: inline-flex;
@@ -577,7 +579,7 @@ a {
     color: var(--color-text-secondary);
     background-color: var(--color-bg-dark);
     margin-top: var(--spacing-xs);
-    padding: 5px 10px;
+    padding: 5px 8px;
 }
 
 .project-button::after {
@@ -1195,9 +1197,6 @@ h4.case-study-content-title {
     }
 
 
-    .project-tag{
-        font-size: 0.7rem;
-    }
 
     .project-info-meta {
         gap: 0px;
@@ -1384,14 +1383,6 @@ h4.case-study-content-title {
         font-size: .9rem;
     }
 
-    .project-tags{
-        gap: 6px;
-    }
-
-    .project-tag{
-        font-size: 0.7rem;
-        padding: 2px 8px;
-    }
 
     .case-study-text{
         font-size: 1.3rem;
