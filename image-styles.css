@@ -78,12 +78,12 @@
     background-image: var(--intro-bg);
 }
 
-.intro-image-machine-learning {
-    --intro-bg: url('../projects/machine-learning/images/machine-learning-thumb.png');
+.intro-image-neural-handwriting {
+    --intro-bg: url('../projects/neural-handwriting/images/neural-handwriting-thumb.png');
     background-image: var(--intro-bg);
 }
 
-.hero-image-machine-learning {
-    --intro-bg: url('../projects/machine-learning/images/machine-learning-hero.png');
+.hero-image-neural-handwriting {
+    --intro-bg: url('../projects/neural-handwriting/images/neural-handwriting-hero.png');
     background-image: var(--intro-bg);
 }
