@@ -63,19 +63,31 @@
 
         <!-- <div id="p5-container"></div> -->
         <header class="hero-content" id="home">
+            <video class="hero-video hero-video-wide" autoplay muted loop playsinline poster="hero.jpg" aria-hidden="true">
+                <source src="hero-video.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video hero-video-square" autoplay muted loop playsinline poster="hero.jpg" aria-hidden="true">
+                <source src="hero-video-square.mp4" type="video/mp4">
+            </video>
+            <button class="hero-video-toggle" type="button" aria-label="Pause video">
+                <span class="hero-video-toggle-pause" aria-hidden="true"></span>
+                <span class="hero-video-toggle-play" aria-hidden="true"></span>
+            </button>
             <div class="hero-name"><a href="#home">Amy Goodchild</a></div>
 
-            <div class="hero-title">Hello!</div>
-            <div class="hero-tagline-wrap">
-                <span class="hero-tagline">My name is Amy and I use technology to create interactive experiences.</span>
+            <div class="hero-text">
+                <div class="hero-title">Hello!</div>
+                <div class="hero-tagline-wrap">
+                    <span class="hero-tagline">My name is Amy and I use technology to create interactive experiences.</span>
+                </div>
+                <a class="hero-button" href="#work">Have a look
+                    <svg class="hero-button-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                        <path d="M6 14 l8 8 8 -8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+                        <path d="M14 18 l0 -13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+                        
+                    </svg>
+                </a>
             </div>
-            <a class="hero-button" href="#work">Have a look
-                <svg class="hero-button-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                    <path d="M6 14 l8 8 8 -8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
-                    <path d="M14 18 l0 -13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
-                    
-                </svg>
-            </a>
             <!-- <div class="hero-jobtitles">
                 <div class="hero-tagline">creative technologist</div>
                 <div class="hero-tagline">UX designer</div>
@@ -91,7 +103,7 @@
             <div class="intro-text">
                 <p>I'm a <b>creative technologist</b>. I create digital and physical work including browser-based experiences, physical installations, apps, prototypes and more. I'm comfortable moving between concept development and hands-on execution (designing, coding and building).</p>
 
-                <p>An interest in <b>randomness and determinism</b> is core to my practice. This has pulled me towards <b>physics</b> as these are questions best explored at a quantum level. I am currently studying a part-time BSc in Maths & Physics to inform this work.</p>
+                <p style="display:none">An interest in <b>randomness and determinism</b> is core to my practice. This has pulled me towards <b>physics</b> as these are questions best explored at a quantum level. I am currently studying a part-time BSc in Maths & Physics to inform this work.</p>
 
                 <p>Sharing my process is a big part of my practice and I take pride in explaining things to non-technical audiences. I <b>care about how people experience my work</b>, and I consider my audience in everything I do. </p>
                 

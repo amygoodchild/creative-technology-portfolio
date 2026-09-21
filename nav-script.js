@@ -91,3 +91,31 @@
     }, { passive: true });
 })();
 
+
+/* Homepage hero: pause / play both videos together */
+(function() {
+    var toggle = document.querySelector('.hero-video-toggle');
+    var videos = document.querySelectorAll('.hero-video');
+    if (!toggle || !videos.length) return;
+
+    function setPaused(paused) {
+        videos.forEach(function(video) {
+            if (paused) {
+                video.pause();
+            } else {
+                video.play();
+            }
+        });
+        toggle.classList.toggle('is-paused', paused);
+        toggle.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
+    }
+
+    toggle.addEventListener('click', function() {
+        var anyPlaying = false;
+        videos.forEach(function(video) {
+            if (!video.paused) anyPlaying = true;
+        });
+        setPaused(anyPlaying);
+    });
+})();
+
