@@ -250,6 +250,7 @@ a {
 */
 
 .hero-content {    
+    background-color: var(--color-bg-dark);
     background-image: url(hero.jpg);
     height: 95vh;
     width: 100%;
